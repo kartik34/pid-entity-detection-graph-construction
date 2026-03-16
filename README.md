@@ -50,7 +50,7 @@ poetry install
 
 ## Environment variables
 
-Create a `.env` file in repo root:
+Ensure your `.env` already contains:
 
 ```env
 OPENROUTER_API_KEY=your_key_here
@@ -69,11 +69,30 @@ poetry run pid-audit
 
 This executes all steps and writes outputs under `outputs/`.
 
+## Hosted model outputs
+
+You can view generated graphs for multiple VLM options at:
+
+- <https://kartik34.github.io/pid-entity-detection-graph-construction/>
+
+Direct viewer links:
+
+- Sonnet 4.6: <https://kartik34.github.io/pid-entity-detection-graph-construction/viewers/sonnet-4.6.html>
+- GPT-5.4: <https://kartik34.github.io/pid-entity-detection-graph-construction/viewers/gpt-5.4.html>
+- Grok 4.2 Beta: <https://kartik34.github.io/pid-entity-detection-graph-construction/viewers/grok-4.2-beta.html>
+- Gemini 3 Flash Preview: <https://kartik34.github.io/pid-entity-detection-graph-construction/viewers/gemini-3-flash-preview.html>
+
+Notes:
+
+- Grok did a decent job detecting edges and populating relevant details for a relatively low cost per PID (3 page pdf) pipeline run of about ~10 cents in tokens
+- Sonnet 4.6 also performed very well, but each pipeline cost about 30-50 cents in tokens
+- At scale (assuming 10,000 documents per client) this could cost upto 5-7k USD for a VLM result.
+
 ## Pipeline stages
 
 `main.py` runs 9 steps:
 
-1. Ingest documents (render PDF pages, preprocess OCR images)
+1. Ingest documents (render PDF pages)
 2. Parse SOP
 3. OCR and clustering
 4. OCR correction with LLM
@@ -88,10 +107,6 @@ This executes all steps and writes outputs under `outputs/`.
 Core outputs:
 
 - `outputs/sop_structured.json`
-- `outputs/ocr_page_{n}_raw.json`
-- `outputs/ocr_page_{n}_clustered.json`
-- `outputs/ocr_page_{n}_corrected.json`
-- `outputs/vision_page_{n}.json`
 - `outputs/confirmed_tags.json`
 - `outputs/graph.json`
 - `outputs/findings.json`
@@ -119,12 +134,30 @@ Debug images:
   - `pipe_label`
   - `flow_direction`
 
-## Design choices
+## Design choices / approach
 
-- OCR determines node existence; vision enriches nodes and extracts connectivity.
-- Vision output is constrained with strict JSON schema.
-- If vision returns empty/unparseable output, confirmed nodes are still emitted with `needs_review=true`.
-- Audit logic is deterministic and rule-based.
+### OCR
+
+- Used Tesseract to extract raw text boxes, then clustered nearby detections into candidate tag regions.
+- Dense P&ID areas and linework (pipes/symbols) reduced OCR quality and made deterministic parsing brittle.
+
+### OCR + LLM normalization
+
+- Added an LLM correction step with strict JSON schema output validation.
+- This normalizes noisy OCR text into ISA-style tags and structured attributes.
+- Chose this approach because pure deterministic parsing was not robust enough on messy OCR output.
+
+### VLM graph construction
+
+- Used a multimodal VLM to infer connectivity (edges) between confirmed OCR tags.
+- Inputs to the VLM include confirmed tags + bounding boxes, the base page image, an overlay image with highlighted boxes, and image dimensions for spatial context.
+- If the VLM returns empty or invalid JSON, confirmed nodes are still emitted with `needs_review=true`.
+- A fully deterministic graph-construction approach was explored first, but required significantly more modeling/tuning for dense diagrams.
+
+### Audit
+
+- Audit logic is deterministic and rule-based (missing equipment, pressure mismatch, temperature mismatch).
+- The same pattern can be extended with configurable rule sets for different plant or spec standards.
 
 ## Current limitations
 
@@ -135,13 +168,5 @@ Debug images:
 ## Troubleshooting
 
 - `Missing OPENROUTER_API_KEY`: add key to `.env`.
-- OCR quality is low: tune `PID_AUDIT_OCR_PREPROCESS_SCALE` and rerun.
+- OCR quality is low: tune `PID_AUDIT_OCR_UPSCALE_FACTOR`, `PID_AUDIT_OCR_CROP_PAD`, and `PID_AUDIT_OCR_LENIENT_MIN_BOX_AREA`, then rerun.
 - Viewer looks stale: rerun pipeline or regenerate with `pid-audit-graph-ui`.
-
-## Notes for take-home evaluation
-
-This implementation prioritizes:
-
-- modular pipeline stages
-- intermediate artifacts at every step
-- deterministic audit rules
