@@ -1,0 +1,1694 @@
+{
+  "node_count": 78,
+  "edge_count": 24,
+  "nodes": [
+    {
+      "id": "F-715A@p1",
+      "tag": "F-715A",
+      "component_type": "filter_separator",
+      "equipment_class": "major",
+      "family": "F-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2202,
+        1945,
+        2375,
+        2087
+      ],
+      "source": "ocr",
+      "size_inches": "18\"",
+      "notation": "PARTICULATE FILTER SEPARATOR",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "design_pressure_psig": 275.0,
+      "design_temperature_f": 100.0,
+      "pressure_rating_psig": 275.0,
+      "position_description": "Left filter separator unit"
+    },
+    {
+      "id": "F-715B@p1",
+      "tag": "F-715B",
+      "component_type": "filter_separator",
+      "equipment_class": "major",
+      "family": "F-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4098,
+        1931,
+        4268,
+        1964
+      ],
+      "source": "ocr",
+      "size_inches": "18\"",
+      "notation": "PARTICULATE FILTER SEPARATOR",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "design_pressure_psig": 275.0,
+      "design_temperature_f": 100.0,
+      "pressure_rating_psig": 275.0,
+      "position_description": "Right filter separator unit"
+    },
+    {
+      "id": "MV-715-11@p1",
+      "tag": "MV-715-11",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4864,
+        1014,
+        4972,
+        1115
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "L.O.",
+      "pipe_label": "1\"-D2S",
+      "service": "VENT",
+      "position_description": "Vent line isolation valve to closed drain tank"
+    },
+    {
+      "id": "RV-6119-A@p1",
+      "tag": "RV-6119-A",
+      "component_type": "relief_valve",
+      "equipment_class": "minor",
+      "family": "RV-6119",
+      "page": 1,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        5387,
+        1024,
+        5930,
+        1113
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "TO CLOSED DRAIN TANK V-005",
+      "pipe_label": "1\"-RV-6119-A",
+      "service": "VENT",
+      "position_description": "Relief valve at top right"
+    },
+    {
+      "id": "MV-720-01@p1",
+      "tag": "MV-720-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-720",
+      "page": 1,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        5012,
+        1264,
+        5128,
+        1338
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "L.O.",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Outlet valve to surge drum"
+    },
+    {
+      "id": "V-720@p1",
+      "tag": "V-720",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-720",
+      "page": 1,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        5452,
+        1271,
+        5740,
+        1333
+      ],
+      "source": "ocr",
+      "notation": "TO SURGE DRUM V-720",
+      "pipe_label": "6\"-PL-2240-D",
+      "service": "LIQUID",
+      "position_description": "Off-page destination Surge Drum"
+    },
+    {
+      "id": "MV-715-02@p1",
+      "tag": "MV-715-02",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3220,
+        1364,
+        3292,
+        1484
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "L.O.",
+      "pipe_label": "1\"-D2S",
+      "service": "GAS",
+      "position_description": "Isolation valve on the upper bridging line"
+    },
+    {
+      "id": "MV-715-01@p1",
+      "tag": "MV-715-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        2195,
+        1580,
+        2648,
+        1897
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "L.O.",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Main bypass valve"
+    },
+    {
+      "id": "MV-720-04@p1",
+      "tag": "MV-720-04",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-720",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        5288,
+        1527,
+        5930,
+        1732
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "N.C.",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Normally closed outlet valve"
+    },
+    {
+      "id": "V-730@p1",
+      "tag": "V-730",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-730",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5288,
+        1527,
+        5930,
+        1732
+      ],
+      "source": "ocr",
+      "notation": "TO CONDENSATE 2-PHASE SEPARATOR V-730",
+      "pipe_label": "6\"-PL-2241-D",
+      "service": "LIQUID/GAS",
+      "position_description": "Off-page destination Separator V-730"
+    },
+    {
+      "id": "MV-715-05A@p1",
+      "tag": "MV-715-05A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2195,
+        1580,
+        2648,
+        1897
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "PSV-715-10@p1",
+      "tag": "PSV-715-10",
+      "component_type": "pressure_safety_valve",
+      "equipment_class": "minor",
+      "family": "PSV-715",
+      "page": 1,
+      "confidence": 0.75,
+      "needs_review": false,
+      "bbox": [
+        3786,
+        1579,
+        4237,
+        1890
+      ],
+      "source": "ocr",
+      "set_point_psig": 275.0,
+      "size_inches": "3/4\"x1\"",
+      "notation": "SET @ 275 PSIG",
+      "pipe_label": "1\"-D2S",
+      "service": "RELIEF",
+      "position_description": "Pressure safety valve for F-715B"
+    },
+    {
+      "id": "MV-715-05B@p1",
+      "tag": "MV-715-05B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": true,
+      "bbox": [
+        3786,
+        1579,
+        4237,
+        1890
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715-08B@p1",
+      "tag": "MV-715-08B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3786,
+        1579,
+        4237,
+        1890
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715-12A@p1",
+      "tag": "MV-715-12A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2202,
+        1945,
+        2375,
+        2087
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715-04B@p1",
+      "tag": "MV-715-04B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        3752,
+        1952,
+        3827,
+        2084
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-713-12B@p1",
+      "tag": "MV-713-12B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-713",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        4086,
+        2015,
+        4216,
+        2089
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715-02A@p1",
+      "tag": "MV-715-02A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2953,
+        2111,
+        3109,
+        2128
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "NC",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Inlet valve to F-715A"
+    },
+    {
+      "id": "MV-715-02B@p1",
+      "tag": "MV-715-02B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3496,
+        2111,
+        3649,
+        2128
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "NC",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Inlet valve to F-715B"
+    },
+    {
+      "id": "MV-715-06B@p1",
+      "tag": "MV-715-06B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3160,
+        2267,
+        3388,
+        2372
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "LO",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Outlet valve from F-715B"
+    },
+    {
+      "id": "MV-715-06A@p1",
+      "tag": "MV-715-06A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3160,
+        2267,
+        3388,
+        2372
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "LO",
+      "pipe_label": "6\"-D2R",
+      "service": "GAS",
+      "position_description": "Outlet valve from F-715A"
+    },
+    {
+      "id": "MV-715-11A@p1",
+      "tag": "MV-715-11A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": true,
+      "bbox": [
+        2238,
+        2303,
+        2368,
+        2375
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-719-15B@p1",
+      "tag": "MV-719-15B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-719",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        4086,
+        2305,
+        4216,
+        2377
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715@p1",
+      "tag": "MV-715",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        2435,
+        2448,
+        2528,
+        2561
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-715-14A@p1",
+      "tag": "MV-715-14A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2562,
+        2531,
+        2716,
+        2608
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "LC",
+      "pipe_label": "1\"-D2S",
+      "service": "DRAIN",
+      "position_description": "Drain valve for F-715A"
+    },
+    {
+      "id": "MV-715-14B@p1",
+      "tag": "MV-715-14B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3745,
+        2531,
+        3896,
+        2608
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "LC",
+      "pipe_label": "1\"-D2S",
+      "service": "DRAIN",
+      "position_description": "Drain valve for F-715B"
+    },
+    {
+      "id": "V-710@p1",
+      "tag": "V-710",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-710",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        488,
+        2797,
+        832,
+        2817
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "FROM SLUG CATCHER V-710",
+      "pipe_label": "6\"-PL-2000-D",
+      "service": "GAS",
+      "position_description": "Source vessel Slug Catcher"
+    },
+    {
+      "id": "MV-715-07@p1",
+      "tag": "MV-715-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3397,
+        2860,
+        3469,
+        2980
+      ],
+      "source": "ocr",
+      "size_inches": "1\"",
+      "notation": "LO",
+      "pipe_label": "1\"-D2S",
+      "service": "DRAIN",
+      "position_description": "Drain header isolation valve"
+    },
+    {
+      "id": "V-740@p2",
+      "tag": "V-740",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-740",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2646,
+        130,
+        3380,
+        323
+      ],
+      "source": "ocr",
+      "size_inches": "30\"",
+      "notation": "NGL STABILIZER",
+      "service": "STABILIZER TOWER",
+      "design_pressure_psig": 300.0,
+      "design_temperature_f": 375.0,
+      "pressure_rating_psig": 400.0,
+      "position_description": "Top center of the diagram"
+    },
+    {
+      "id": "MV-745-22@p2",
+      "tag": "MV-745-22",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3145,
+        496,
+        3265,
+        568
+      ],
+      "source": "ocr",
+      "pipe_label": "4\"-B2R",
+      "size_inches": "4\"",
+      "notation": "MV-745-22",
+      "service": "VAPOR OUTLET",
+      "position_description": "On top outlet line of V-740"
+    },
+    {
+      "id": "MV-745-06@p2",
+      "tag": "MV-745-06",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.92,
+      "needs_review": true,
+      "bbox": [
+        5183,
+        1415,
+        5255,
+        1537
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-07@p2",
+      "tag": "MV-745-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        3676,
+        560,
+        3805,
+        757
+      ],
+      "source": "ocr",
+      "notation": "LO",
+      "position_description": null
+    },
+    {
+      "id": "RV-6145-A@p2",
+      "tag": "RV-6145-A",
+      "component_type": "relief_valve",
+      "equipment_class": "minor",
+      "family": "RV-6145",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5656,
+        654,
+        5932,
+        728
+      ],
+      "source": "ocr",
+      "size_inches": "8\"",
+      "set_point_psig": 300.0,
+      "notation": "RV-6145-A",
+      "pipe_label": "4\"-RV-6138-A",
+      "service": "RELIEF",
+      "position_description": "Relief system connection on top right"
+    },
+    {
+      "id": "RV-6138-A@p2",
+      "tag": "RV-6138-A",
+      "component_type": "relief_valve",
+      "equipment_class": "minor",
+      "family": "RV-6138",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        5303,
+        668,
+        5485,
+        690
+      ],
+      "source": "ocr",
+      "size_inches": "4\"",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-01@p2",
+      "tag": "MV-745-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5363,
+        868,
+        5435,
+        983
+      ],
+      "source": "ocr",
+      "size_inches": "4\"",
+      "notation": "MV-745-01",
+      "pipe_label": "4\"-PL-2242-S",
+      "service": "FEED",
+      "position_description": "Inlet line upper right"
+    },
+    {
+      "id": "MV-745-02@p2",
+      "tag": "MV-745-02",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        3390,
+        956,
+        3512,
+        1028
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-749@p2",
+      "tag": "V-749",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-749",
+      "page": 2,
+      "confidence": 0.85,
+      "needs_review": true,
+      "bbox": [
+        2876,
+        973,
+        3116,
+        1052
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-32@p2",
+      "tag": "MV-745-32",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2588,
+        985,
+        2824,
+        1158
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "DPIT-45-14@p2",
+      "tag": "DPIT-45-14",
+      "component_type": "dpi",
+      "equipment_class": "minor",
+      "family": "DPIT-45",
+      "page": 2,
+      "confidence": 0.88,
+      "needs_review": true,
+      "bbox": [
+        2432,
+        1256,
+        2485,
+        1295
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "VRU-7685@p2",
+      "tag": "VRU-7685",
+      "component_type": "v",
+      "equipment_class": "minor",
+      "family": "VRU-7685",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        5322,
+        1334,
+        5854,
+        1401
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-743-33@p2",
+      "tag": "MV-743-33",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-743",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2598,
+        1410,
+        2824,
+        1609
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-35@p2",
+      "tag": "MV-745-35",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2598,
+        1410,
+        2824,
+        1609
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-36@p2",
+      "tag": "MV-745-36",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2600,
+        1864,
+        2720,
+        1936
+      ],
+      "source": "ocr",
+      "size_inches": "1/2",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-20@p2",
+      "tag": "MV-745-20",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3467,
+        1998,
+        3815,
+        2109
+      ],
+      "source": "ocr",
+      "size_inches": "6\"",
+      "notation": "MV-745-20",
+      "pipe_label": "6\"-PG-0544-B-2\"H",
+      "service": "REBOILED VAPOR",
+      "position_description": "Middle right vapor return line"
+    },
+    {
+      "id": "E-745@p2",
+      "tag": "E-745",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        5425,
+        2324,
+        5766,
+        2416
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-19@p2",
+      "tag": "MV-745-19",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3832,
+        2063,
+        3904,
+        2180
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-12@p2",
+      "tag": "MV-745-12",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3409,
+        2315,
+        3529,
+        2387
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-59@p2",
+      "tag": "MV-745-59",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        983,
+        2768,
+        1319,
+        2843
+      ],
+      "source": "ocr",
+      "size_inches": "2\"",
+      "pipe_label": "2\"-DC-3202-A-1\"",
+      "notation": "MV-745-59",
+      "service": "DRAIN",
+      "position_description": "Bottom left discharge line from P-745"
+    },
+    {
+      "id": "MV-745-58@p2",
+      "tag": "MV-745-58",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        983,
+        2768,
+        1319,
+        2843
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "P-745@p2",
+      "tag": "P-745",
+      "component_type": "pump",
+      "equipment_class": "major",
+      "family": "P-745",
+      "page": 2,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        1146,
+        3547,
+        1311,
+        3604
+      ],
+      "source": "ocr",
+      "notation": "SUMP",
+      "service": "SUMP",
+      "position_description": "Bottom left corner in containment"
+    },
+    {
+      "id": "AC-746@p3",
+      "tag": "AC-746",
+      "component_type": "after_cooler",
+      "equipment_class": "major",
+      "family": "AC-746",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2161,
+        2243,
+        2344,
+        2276
+      ],
+      "source": "ocr",
+      "notation": "NGL AFTER COOLER",
+      "size_inches": "4\"",
+      "pipe_label": "3\"-B2R-MV-746-03-",
+      "service": "NGL",
+      "design_pressure_psig": 350.0,
+      "design_temperature_f": 400.0,
+      "pressure_rating_psig": 350.0,
+      "position_description": "Center left of the diagram"
+    },
+    {
+      "id": "E-742@p3",
+      "tag": "E-742",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3402,
+        188,
+        3959,
+        385
+      ],
+      "source": "ocr",
+      "notation": "HEAT RECOVERY",
+      "size_inches": "3\"",
+      "pipe_label": "3\"-B2R-MV-742-15",
+      "service": "NGL",
+      "design_pressure_psig": 300.0,
+      "design_temperature_f": 375.0,
+      "pressure_rating_psig": 300.0,
+      "position_description": "Upper right side of the diagram"
+    },
+    {
+      "id": "V-745@p3",
+      "tag": "V-745",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-745",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        406,
+        1459,
+        721,
+        1568
+      ],
+      "source": "ocr",
+      "size_inches": "4\"",
+      "notation": "NGL STABILIZER",
+      "pipe_label": "4\"-PL-2242-B",
+      "service": "STABILIZER FEED",
+      "position_description": "Off-page connector top left"
+    },
+    {
+      "id": "MV-742-09@p3",
+      "tag": "MV-742-09",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        767,
+        1496,
+        839,
+        1616
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-733-11@p3",
+      "tag": "MV-733-11",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-733",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2351,
+        1638,
+        2464,
+        1708
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-755-13@p3",
+      "tag": "MV-755-13",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-755",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2200,
+        1866,
+        2320,
+        1936
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-7355-14@p3",
+      "tag": "MV-7355-14",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-7355",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2516,
+        1864,
+        2636,
+        1933
+      ],
+      "source": "ocr",
+      "notation": "4/2\"-D2z",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-13@p3",
+      "tag": "MV-742-13",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4530,
+        2092,
+        4547,
+        2209
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-15@p3",
+      "tag": "MV-742-15",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4573,
+        2204,
+        4700,
+        2303
+      ],
+      "source": "ocr",
+      "notation": "3\" BYPASS",
+      "pipe_label": "3 \u2014B2R",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-07@p3",
+      "tag": "MV-742-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4100,
+        2281,
+        4230,
+        2399
+      ],
+      "source": "ocr",
+      "pipe_label": "1/2\"-D2Z",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-16@p3",
+      "tag": "MV-742-16",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4340,
+        2257,
+        4412,
+        2375
+      ],
+      "source": "ocr",
+      "pipe_label": "1/2\"-027",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-08@p3",
+      "tag": "MV-742-08",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4264,
+        2269,
+        4280,
+        2389
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "E-745@p3",
+      "tag": "E-745",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-745",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        320,
+        2384,
+        731,
+        2476
+      ],
+      "source": "ocr",
+      "notation": "FROM STABILIZER 14 REBOILER",
+      "pipe_label": "3\"-PL\u20142250-B-1\"H",
+      "position_description": null
+    },
+    {
+      "id": "MV-746@p3",
+      "tag": "MV-746",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2509,
+        2478,
+        2629,
+        2639
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742@p3",
+      "tag": "MV-742",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4009,
+        2543,
+        4098,
+        2694
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-18@p3",
+      "tag": "MV-742-18",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3172,
+        2610,
+        3253,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-755-15@p3",
+      "tag": "MV-755-15",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-755",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3298,
+        2610,
+        3376,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746-09@p3",
+      "tag": "MV-746-09",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        3419,
+        2747,
+        3503,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-10@p3",
+      "tag": "MV-742-10",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        4292,
+        2780,
+        4412,
+        2797
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-780@p3",
+      "tag": "V-780",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-780",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        356,
+        2820,
+        733,
+        3030
+      ],
+      "source": "ocr",
+      "size_inches": "3\"",
+      "notation": "CONDENSATE SURGE DRUM",
+      "pipe_label": "3\"-FG-2235-A",
+      "service": "CONDENSATE",
+      "position_description": "Off-page connector mid left"
+    },
+    {
+      "id": "E-735@p3",
+      "tag": "E-735",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-735",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        486,
+        3066,
+        726,
+        3150
+      ],
+      "source": "ocr",
+      "size_inches": "3\"",
+      "notation": "NGL PREHEAT EXCHANGER",
+      "pipe_label": "3\"-HOT NGL LIQUID",
+      "service": "HOT NGL",
+      "position_description": "Off-page connector bottom left"
+    },
+    {
+      "id": "MV-746-05@p3",
+      "tag": "MV-746-05",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        769,
+        2716,
+        882,
+        3085
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746-08@p3",
+      "tag": "MV-746-08",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        2862,
+        2963,
+        2982,
+        3032
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-735-16@p3",
+      "tag": "MV-735-16",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-735",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        3541,
+        2950,
+        3748,
+        3032
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-740@p3",
+      "tag": "V-740",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-740",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        486,
+        3193,
+        690,
+        3275
+      ],
+      "source": "ocr",
+      "size_inches": "4\"",
+      "notation": "FLASH DRUM",
+      "pipe_label": "4\"-FG-2238-B",
+      "service": "NGL FROM FLASH DRUM",
+      "position_description": "Off-page connector bottom left"
+    },
+    {
+      "id": "MV-742-03@p3",
+      "tag": "MV-742-03",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": true,
+      "bbox": [
+        3767,
+        3232,
+        3841,
+        3354
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "CLOSED_DRAIN_HEADER@p2",
+      "tag": "CLOSED_DRAIN_HEADER",
+      "component_type": "external",
+      "equipment_class": "external",
+      "family": "CLOSED_DRAIN_HEADER",
+      "page": 2,
+      "source": "vision_inference",
+      "confidence": 1.0,
+      "needs_review": false,
+      "bbox": null
+    },
+    {
+      "id": "RELIEF_HEADER@p2",
+      "tag": "RELIEF_HEADER",
+      "component_type": "external",
+      "equipment_class": "external",
+      "family": "RELIEF_HEADER",
+      "page": 2,
+      "source": "vision_inference",
+      "confidence": 1.0,
+      "needs_review": false,
+      "bbox": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "F-715A@p1",
+      "target": "MV-715-06A@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715B@p1",
+      "target": "MV-715-06B@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-11@p1",
+      "target": "RV-6119-A@p1",
+      "pipe_label": "1\"-D2S",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-720-01@p1",
+      "target": "V-720@p1",
+      "pipe_label": "6\"-PL-2240-D",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-02A@p1",
+      "target": "F-715A@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-02B@p1",
+      "target": "F-715B@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-06B@p1",
+      "target": "MV-720-01@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-06A@p1",
+      "target": "MV-720-01@p1",
+      "pipe_label": "6\"-D2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-14A@p1",
+      "target": "MV-715-07@p1",
+      "pipe_label": "1\"-D2S",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-14B@p1",
+      "target": "MV-715-07@p1",
+      "pipe_label": "1\"-D2S",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-710@p1",
+      "target": "MV-715-02A@p1",
+      "pipe_label": "6\"-PL-2000-D",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-710@p1",
+      "target": "MV-715-02B@p1",
+      "pipe_label": "6\"-PL-2000-D",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-740@p2",
+      "target": "MV-745-22@p2",
+      "pipe_label": "4\"-HBR",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-740@p2",
+      "target": "RV-6145-A@p2",
+      "pipe_label": "4\"-RV-6138-A",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "RV-6145-A@p2",
+      "target": "RELIEF_HEADER@p2",
+      "pipe_label": "8\"-RV-6145-A",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-01@p2",
+      "target": "V-740@p2",
+      "pipe_label": "4\"-PL-2242-S",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-20@p2",
+      "target": "V-740@p2",
+      "pipe_label": "6\"-PG-0544-B-2\"H",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-59@p2",
+      "target": "CLOSED_DRAIN_HEADER@p2",
+      "pipe_label": "2\"-DE-0202-A-1\"H-E-HT",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "P-745@p2",
+      "target": "MV-745-59@p2",
+      "pipe_label": "2\"-DE-0202-A-1\"H-E-HT",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "AC-746@p3",
+      "target": "V-780@p3",
+      "pipe_label": "3\"-FG-2235-A",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-742@p3",
+      "target": "AC-746@p3",
+      "pipe_label": "3\"-B2R",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-742@p3",
+      "target": "V-745@p3",
+      "pipe_label": "4\"-PL-2242-B",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-735@p3",
+      "target": "E-742@p3",
+      "pipe_label": "3\" HOT NGL LIQUID",
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-740@p3",
+      "target": "E-742@p3",
+      "pipe_label": "4\"-FG-2238-B",
+      "flow_direction": "forward"
+    }
+  ]
+}

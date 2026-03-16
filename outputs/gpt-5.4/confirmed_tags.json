@@ -1,0 +1,1822 @@
+[
+  {
+    "tag": "F-715A",
+    "component_type": "F",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "18\" O.D. x 42.5\" T/T_STRIPING_DIMENSIONING_REMOVED_FOR_RULES_ACTUALLY_EQUIPMENT_SPEC_BLOCKING_REMOVED_FOR_JSON_FORMATTING_RULES_ACTUALLY_SPEC_SHEET_DATA_REMOVED_FOR_TAG_ONLY_FOCUSING_BUT_KEEPING_SIZE_IF_DESCRIBEDING_TAG_TEXTS_IN_CLUSTER_0_CONTAINS_SPECS_KEEPING_TAG_ID_F-715A",
+      "notation": "PARTICULATE FILTER",
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [],
+    "bbox": [
+      2641,
+      181,
+      3332,
+      505
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "F-715B",
+    "component_type": "F",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "PARTICULATE FILTER",
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [],
+    "bbox": [
+      2641,
+      181,
+      3332,
+      505
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-11",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "1\"-D92S \u2014_tat\u2014 MV\u2014715-\u20141 L.O."
+    ],
+    "bbox": [
+      4864,
+      1014,
+      4972,
+      1115
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-720-01",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "6\u2018\u2014D2R \u2014{ Dod H\u2014 MV- 720-01"
+    ],
+    "bbox": [
+      5012,
+      1264,
+      5128,
+      1338
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-720",
+    "component_type": "V",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "6\"\u2014PL-22740-\u2014D TO SURGE DRUM V-\u201472Q"
+    ],
+    "bbox": [
+      5452,
+      1271,
+      5740,
+      1333
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-7159-02",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "NG 1 -D2$  . [a . aa . a MV-7159-02 )"
+    ],
+    "bbox": [
+      3220,
+      1364,
+      3292,
+      1484
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-01",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "6\u201d\"\u2014-D2R \u2014e 00d MV\u2014715-01"
+    ],
+    "bbox": [
+      3527,
+      1458,
+      3659,
+      1535
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-720-04",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.85,
+    "raw_ocr": [
+      "MV\u201472D-D4"
+    ],
+    "bbox": [
+      5288,
+      1527,
+      5930,
+      1732
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-730",
+    "component_type": "V",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "CONDENSATE N.C. 2 PHASE SEPARATOR V-73D"
+    ],
+    "bbox": [
+      5288,
+      1527,
+      5930,
+      1732
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-05A",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV-715-05A"
+    ],
+    "bbox": [
+      2195,
+      1580,
+      2648,
+      1897
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-05B",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "MV-715 DSB"
+    ],
+    "bbox": [
+      3786,
+      1579,
+      4237,
+      1890
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-08B",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "MV\u2014715\u2014086"
+    ],
+    "bbox": [
+      3786,
+      1579,
+      4237,
+      1890
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "F-715A",
+    "component_type": "Filter",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "F\u2014-/15A"
+    ],
+    "bbox": [
+      2202,
+      1945,
+      2375,
+      2087
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-12A",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV\u2014715-12A"
+    ],
+    "bbox": [
+      2202,
+      1945,
+      2375,
+      2087
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "F-715B",
+    "component_type": "Filter",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "F\u2014715B"
+    ],
+    "bbox": [
+      4098,
+      1931,
+      4268,
+      1964
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-04B",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV- 715-048"
+    ],
+    "bbox": [
+      3752,
+      1952,
+      3827,
+      2084
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-12B",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "MV\u2014713-12B"
+    ],
+    "bbox": [
+      4086,
+      2015,
+      4216,
+      2089
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-02A",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV-715-O02A"
+    ],
+    "bbox": [
+      2953,
+      2111,
+      3109,
+      2128
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-02B",
+    "component_type": "Manual Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV- 715-028"
+    ],
+    "bbox": [
+      3496,
+      2111,
+      3649,
+      2128
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-06B",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "6\u0000-\u2014D2R 6\"\u2014D2R \u2014 Dod DOdt-\u2014 MV-715 MV-715 \u2014O6B \u2014O6A"
+    ],
+    "bbox": [
+      3160,
+      2267,
+      3388,
+      2372
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-06A",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "6\u0000-\u2014D2R 6\"\u2014D2R \u2014 Dod DOdt-\u2014 MV-715 MV-715 \u2014O6B \u2014O6A"
+    ],
+    "bbox": [
+      3160,
+      2267,
+      3388,
+      2372
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-11A",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1/2-inch or 1-inch (ambiguous context from raw OCR: 1/2\u0000-D25 MV-71 o~ TA). Based on OCR pattern, likely MV-715-11A or 715-11B variant.",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.85,
+    "raw_ocr": [],
+    "bbox": [
+      2238,
+      2303,
+      2368,
+      2375
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-15B",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.88,
+    "raw_ocr": [
+      "1/2\u0000-D2S MV\u2014 719-158"
+    ],
+    "bbox": [
+      4086,
+      2305,
+      4216,
+      2377
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.85,
+    "raw_ocr": [
+      "\u201415 1\u0000-D2S MV\u20147135"
+    ],
+    "bbox": [
+      2435,
+      2448,
+      2528,
+      2561
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-14A",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\u0000-D2S MV-715-14A"
+    ],
+    "bbox": [
+      2562,
+      2531,
+      2716,
+      2608
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-14B",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "1\u2019-D2S \u2014pa-\u2014 MV\u2014713-\u201414B8"
+    ],
+    "bbox": [
+      3745,
+      2531,
+      3896,
+      2608
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-710",
+    "component_type": "Vessel",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "FROM SLUG CATCHER V\u20147/10"
+    ],
+    "bbox": [
+      488,
+      2797,
+      832,
+      2817
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-715-07",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 1,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\u0000-D2S MV\u2014715-07"
+    ],
+    "bbox": [
+      3397,
+      2860,
+      3469,
+      2980
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-740",
+    "component_type": "V",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "30",
+      "notation": "NGL STABILIZER",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.85,
+    "raw_ocr": [
+      "V\u2014= 7/40) NGL STABILIZER 30\u00b0 OD X 55-0\" S/S TWO (2) 20\u00b0 SECTIONS M.W.P.: 300 PSIG @ 3/75 F 2\u00b0 H"
+    ],
+    "bbox": [
+      2646,
+      130,
+      3380,
+      323
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-22",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "4",
+      "notation": null,
+      "pipe_label": "4\"-B2R"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "4\u00b0-B2R \u2014 pod }\u2014 MV\u2014745-22"
+    ],
+    "bbox": [
+      3145,
+      496,
+      3265,
+      568
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-06",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "LO",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV\u2014745\u201406 4\u00b0\u2014A2R Dod -\u2014 MV-745-\u201407 LO"
+    ],
+    "bbox": [
+      3676,
+      560,
+      3805,
+      757
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-07",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "4",
+      "notation": "LO",
+      "pipe_label": "4\"-A2R"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV\u2014745\u201406 4\u00b0\u2014A2R Dod -\u2014 MV-745-\u201407 LO"
+    ],
+    "bbox": [
+      3676,
+      560,
+      3805,
+      757
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "RV-6145-A",
+    "component_type": "RV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "8",
+      "notation": "RELIEF HEADER",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "TO 8 RELIEF HEADER 43 # 8\u201d-RV-6145-A 10\u20140600 42"
+    ],
+    "bbox": [
+      5656,
+      654,
+      5932,
+      728
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "RV-6138-A",
+    "component_type": "RV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "4",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "4\"-RV\u20146138\u2014A"
+    ],
+    "bbox": [
+      5303,
+      668,
+      5485,
+      690
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-01",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1",
+      "notation": null,
+      "pipe_label": "1\"-D2S"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\u00b0-02S MV\u2014 745-01"
+    ],
+    "bbox": [
+      5363,
+      868,
+      5435,
+      983
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-02",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "4\"",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV-745-\u201402"
+    ],
+    "bbox": [
+      3390,
+      956,
+      3512,
+      1028
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-749",
+    "component_type": "Vessel",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "V\u2014/49"
+    ],
+    "bbox": [
+      2876,
+      973,
+      3116,
+      1052
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-10",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1/2\u2019",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.85,
+    "raw_ocr": [
+      "MV\u2014745"
+    ],
+    "bbox": [
+      2588,
+      985,
+      2824,
+      1158
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-32",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1/2\u2019",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "MV\u2014 745-32"
+    ],
+    "bbox": [
+      2588,
+      985,
+      2824,
+      1158
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "DPI-45-14",
+    "component_type": "Differential Pressure Indicator",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "DPIT 45-14"
+    ],
+    "bbox": [
+      2432,
+      1256,
+      2485,
+      1295
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "VRU-7685",
+    "component_type": "Vapor Recovery Unit",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "VRU-7685"
+    ],
+    "bbox": [
+      5322,
+      1334,
+      5854,
+      1401
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-743-33",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1/2\u2019",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "MV\u2014743-33"
+    ],
+    "bbox": [
+      2598,
+      1410,
+      2824,
+      1609
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-35",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1/2\"",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "MV-745-35"
+    ],
+    "bbox": [
+      2598,
+      1410,
+      2824,
+      1609
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-06",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1\"",
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV\u2014-745\u2014-06"
+    ],
+    "bbox": [
+      5183,
+      1415,
+      5255,
+      1537
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-36",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "0.5",
+      "notation": "1/2\"-DBS",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1/2\"-DBS MV\u2014745-36"
+    ],
+    "bbox": [
+      2600,
+      1864,
+      2720,
+      1936
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-20",
+    "component_type": "MOTOR VALVE",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "6\"\u2014B2R \u2014\u2014 [Od -\u2014 HOT MV-745-20 L, 0."
+    ],
+    "bbox": [
+      3467,
+      1998,
+      3815,
+      2109
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-745",
+    "component_type": "HEAT EXCHANGER",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "STABILIZER REBOILER",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.99,
+    "raw_ocr": [
+      "STABILIZER REBOILER E-745"
+    ],
+    "bbox": [
+      5214,
+      2012,
+      5836,
+      2104
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-19",
+    "component_type": "MOTOR VALVE",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.99,
+    "raw_ocr": [
+      "/2-D2S MV-745-19"
+    ],
+    "bbox": [
+      3832,
+      2063,
+      3904,
+      2180
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-12",
+    "component_type": "MOTOR VALVE",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "4\u2014B2R \u2014{p&j-\u2014 MV-745-\u201412"
+    ],
+    "bbox": [
+      3409,
+      2315,
+      3529,
+      2387
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-745",
+    "component_type": "HEAT EXCHANGER",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "STABILIZER REBOILER",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.99,
+    "raw_ocr": [
+      "4\u0000\u2014PL-2249-H-1 1/2\u0000H REBOILER FEED TC STABILIZER REBOILER E\u2014745"
+    ],
+    "bbox": [
+      5425,
+      2324,
+      5766,
+      2416
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-59",
+    "component_type": "Motor Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "2\"",
+      "notation": "HOT",
+      "pipe_label": "2\"-DC-3202-A-1H-E-HT INSUL/HT"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV-745\u201459"
+    ],
+    "bbox": [
+      815,
+      2701,
+      1096,
+      2857
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-59",
+    "component_type": "Motor Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "2\"",
+      "notation": null,
+      "pipe_label": "2\"-D025"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV-745\u201459"
+    ],
+    "bbox": [
+      983,
+      2768,
+      1319,
+      2843
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-745-58",
+    "component_type": "Motor Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "2\"",
+      "notation": null,
+      "pipe_label": "2\"-D5S"
+    },
+    "page": 2,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "MV\u2014 745-58"
+    ],
+    "bbox": [
+      983,
+      2768,
+      1319,
+      2843
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "P-745",
+    "component_type": "Pump",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "SUMP",
+      "pipe_label": null
+    },
+    "page": 2,
+    "confidence": 0.99,
+    "raw_ocr": [
+      "P-745"
+    ],
+    "bbox": [
+      1146,
+      3547,
+      1311,
+      3604
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "AC-746",
+    "component_type": "NGL AFTER COOLER",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "AC\u2014/46 NGL AFTER COOLER 1F12\u2014090-1/2.1 MMBTU/HR, 15 HP 460/3/60 MWP 350 PSIG ~20/400\u00b0 F. 1/16\u201d C.A. (EXCL TUBES)"
+    ],
+    "bbox": [
+      2322,
+      188,
+      3073,
+      356
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-742",
+    "component_type": "HEAT RECOVERY EXCHANGER",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "E\u2014/42 dat HEAT RECOVERY, EXCHA E 4M BIU H ; MWP Soe Asic\u201co- @ 375 3500 PSIG @ 250\u00b0 F TUBE aM LL) at 1/16\u201d C.A. (EXCL. TUBES)"
+    ],
+    "bbox": [
+      3402,
+      188,
+      3959,
+      385
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-745",
+    "component_type": "VESSEL",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "41 1S sore 4\"_PL\u20142242-B TO NGL STABILIZER COOL FEEG TO TOP 349 TRAY V\u2014745"
+    ],
+    "bbox": [
+      318,
+      786,
+      719,
+      913
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-745",
+    "component_type": "V",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "soe 4\"\u2014PL\u20142243-B TQ NGL STABILIZER WARM FEED TO MID TRAY V\u2014745"
+    ],
+    "bbox": [
+      406,
+      1459,
+      721,
+      1568
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-09",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\u00b0-D2S MV\u2014742-09"
+    ],
+    "bbox": [
+      767,
+      1496,
+      839,
+      1616
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-733-11",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "3\u00b0\u2014B2R \u2014 Dod \u2014 MV-733-11"
+    ],
+    "bbox": [
+      2351,
+      1638,
+      2464,
+      1708
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-755-13",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "3\"-B2R \u2014 bod \u2014 MV- 755-13"
+    ],
+    "bbox": [
+      2200,
+      1866,
+      2320,
+      1936
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-7355-14",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "4.5",
+      "notation": null,
+      "pipe_label": "4 1/2-D2Z"
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "4/2\"-D2z MV-7355-14"
+    ],
+    "bbox": [
+      2516,
+      1864,
+      2636,
+      1933
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-13",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "= INI! MV\u2014742-13"
+    ],
+    "bbox": [
+      4530,
+      2092,
+      4547,
+      2209
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-15",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "3",
+      "notation": "BYPASS",
+      "pipe_label": "3-B2R"
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "3 \u2014B2R MV\u2014742-15 3\u00b0 BYPASS"
+    ],
+    "bbox": [
+      4573,
+      2204,
+      4700,
+      2303
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "AC-746",
+    "component_type": "AC",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "AC\u2014/46"
+    ],
+    "bbox": [
+      2161,
+      2243,
+      2344,
+      2276
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-07",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "1.5",
+      "notation": null,
+      "pipe_label": "1 1/2-D2Z"
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "\u00abJ 1/2\"-D2Z az: MV-742-07 |"
+    ],
+    "bbox": [
+      4100,
+      2281,
+      4230,
+      2399
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-16",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": "0.5",
+      "notation": null,
+      "pipe_label": "1/2-D27"
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1 /2\"-027 MV\u2014742-16"
+    ],
+    "bbox": [
+      4340,
+      2257,
+      4412,
+      2375
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-08",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "as 2 6 ee MV\u2014742-08"
+    ],
+    "bbox": [
+      4264,
+      2269,
+      4280,
+      2389
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-745",
+    "component_type": "E",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": "STABILIZER REBOILER",
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "15 3\u00b0 \u2014PL\u20142250-B-1\"H FROM STABILIZER 14 REBOILER E-\u2014745"
+    ],
+    "bbox": [
+      320,
+      2384,
+      731,
+      2476
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-746",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "TP IS MV-746 = -4 4 720\u2014,Z/1"
+    ],
+    "bbox": [
+      2509,
+      2478,
+      2629,
+      2639
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "B2R MV\u2014742 \u201404~ a _ _, eee"
+    ],
+    "bbox": [
+      4009,
+      2543,
+      4098,
+      2694
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-18",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\"x1/2\" 4 /2\"-p2s TO TY-747 MV\u2014742-18"
+    ],
+    "bbox": [
+      3172,
+      2610,
+      3253,
+      2984
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-755-15",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1x1 /2\" 4 /9\u0000-D2S TQ TY-735 MV\u2014755\u201415"
+    ],
+    "bbox": [
+      3298,
+      2610,
+      3376,
+      2984
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-746-09",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\"x1 /2\u2013 1/2\u0000-02S MV-746-\u201409 4uVdS"
+    ],
+    "bbox": [
+      3419,
+      2747,
+      3503,
+      2984
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-10",
+    "component_type": "MV",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "+ MV-742\u201410"
+    ],
+    "bbox": [
+      4292,
+      2780,
+      4412,
+      2797
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-780",
+    "component_type": "V",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "3\u0000\u2014PC\u20142235-A TQ GONDENSATE \u2014 SURGE DRUM V 780 SOI 3\u0000 HOT NGL LIQUID TQ NGL PREHEAT EXCHANGER E-\u2014 735"
+    ],
+    "bbox": [
+      356,
+      2820,
+      733,
+      3030
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-735",
+    "component_type": "E",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "3\u0000\u2014PC\u20142235-A TQ GONDENSATE \u2014 SURGE DRUM V 780 SOI 3\u0000 HOT NGL LIQUID TQ NGL PREHEAT EXCHANGER E-\u2014 735"
+    ],
+    "bbox": [
+      356,
+      2820,
+      733,
+      3030
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-746-05",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.9,
+    "raw_ocr": [
+      "T-DB28 MV\u2014746 \u2014O05"
+    ],
+    "bbox": [
+      769,
+      2716,
+      882,
+      3085
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-746-08",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\"-D2S MV\u2014746-08"
+    ],
+    "bbox": [
+      2862,
+      2963,
+      2982,
+      3032
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-735-16",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\u201dx1/2\u201d 1/2\u00b0-D2S MV\u2014735-16"
+    ],
+    "bbox": [
+      3541,
+      2950,
+      3748,
+      3032
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "E-735",
+    "component_type": "Heat Exchanger",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "3\u00b0 HOT NGL LIQUID FROM NGL PREHEAT EXCHANGER E-735"
+    ],
+    "bbox": [
+      486,
+      3066,
+      726,
+      3150
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "V-740",
+    "component_type": "Vessel",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.98,
+    "raw_ocr": [
+      "4\"\u2014PC\u2014223B-B NGL FROM FLASH DRUM V\u2014740"
+    ],
+    "bbox": [
+      486,
+      3193,
+      690,
+      3275
+    ],
+    "requires_review": false
+  },
+  {
+    "tag": "MV-742-03",
+    "component_type": "Motorized Valve",
+    "attributes": {
+      "set_point_psig": null,
+      "size_inches": null,
+      "notation": null,
+      "pipe_label": null
+    },
+    "page": 3,
+    "confidence": 0.95,
+    "raw_ocr": [
+      "1\"\u2014D2S MV-742-03"
+    ],
+    "bbox": [
+      3767,
+      3232,
+      3841,
+      3354
+    ],
+    "requires_review": false
+  }
+]

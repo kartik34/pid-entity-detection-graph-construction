@@ -1,0 +1,1824 @@
+{
+  "node_count": 74,
+  "edge_count": 77,
+  "nodes": [
+    {
+      "id": "F-715A@p1",
+      "tag": "F-715A",
+      "component_type": "filter_separator",
+      "equipment_class": "major",
+      "family": "F-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2202,
+        1945,
+        2375,
+        2087
+      ],
+      "source": "ocr",
+      "position_description": "bottom-left"
+    },
+    {
+      "id": "F-715B@p1",
+      "tag": "F-715B",
+      "component_type": "filter_separator",
+      "equipment_class": "major",
+      "family": "F-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4098,
+        1931,
+        4268,
+        1964
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-11@p1",
+      "tag": "MV-715-11",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4864,
+        1014,
+        4972,
+        1115
+      ],
+      "source": "ocr",
+      "position_description": "middle-right"
+    },
+    {
+      "id": "MV-720-01@p1",
+      "tag": "MV-720-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-720",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        5012,
+        1264,
+        5128,
+        1338
+      ],
+      "source": "ocr",
+      "position_description": "middle-right"
+    },
+    {
+      "id": "V-720@p1",
+      "tag": "V-720",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-720",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        5452,
+        1271,
+        5740,
+        1333
+      ],
+      "source": "ocr",
+      "position_description": "middle-right"
+    },
+    {
+      "id": "MV-715-02@p1",
+      "tag": "MV-715-02",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3220,
+        1364,
+        3292,
+        1484
+      ],
+      "source": "ocr",
+      "position_description": "middle-center"
+    },
+    {
+      "id": "MV-715-01@p1",
+      "tag": "MV-715-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3527,
+        1458,
+        3659,
+        1535
+      ],
+      "source": "ocr",
+      "position_description": "middle-center"
+    },
+    {
+      "id": "MV-720-04@p1",
+      "tag": "MV-720-04",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-720",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        5288,
+        1527,
+        5930,
+        1732
+      ],
+      "source": "ocr",
+      "position_description": "lower-right"
+    },
+    {
+      "id": "V-730@p1",
+      "tag": "V-730",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-730",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        5288,
+        1527,
+        5930,
+        1732
+      ],
+      "source": "ocr",
+      "position_description": "lower-right"
+    },
+    {
+      "id": "MV-715-05A@p1",
+      "tag": "MV-715-05A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2195,
+        1580,
+        2648,
+        1897
+      ],
+      "source": "ocr",
+      "position_description": "middle-left"
+    },
+    {
+      "id": "MV-715-05B@p1",
+      "tag": "MV-715-05B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3786,
+        1579,
+        4237,
+        1890
+      ],
+      "source": "ocr",
+      "position_description": "middle-center"
+    },
+    {
+      "id": "PSV-715A@p1",
+      "tag": "PSV-715A",
+      "component_type": "pressure_safety_valve",
+      "equipment_class": "minor",
+      "family": "PSV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3786,
+        1579,
+        4237,
+        1890
+      ],
+      "source": "ocr",
+      "size_inches": "3/4\"x1\"",
+      "position_description": "middle-center"
+    },
+    {
+      "id": "MV-715-12A@p1",
+      "tag": "MV-715-12A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2202,
+        1945,
+        2375,
+        2087
+      ],
+      "source": "ocr",
+      "position_description": "bottom-left"
+    },
+    {
+      "id": "MV-715-04B@p1",
+      "tag": "MV-715-04B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3752,
+        1952,
+        3827,
+        2084
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-713-12B@p1",
+      "tag": "MV-713-12B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-713",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4086,
+        2015,
+        4216,
+        2089
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-02A@p1",
+      "tag": "MV-715-02A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2953,
+        2111,
+        3109,
+        2128
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-02B@p1",
+      "tag": "MV-715-02B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3496,
+        2111,
+        3649,
+        2128
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-06B@p1",
+      "tag": "MV-715-06B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3160,
+        2267,
+        3388,
+        2372
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-06A@p1",
+      "tag": "MV-715-06A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3160,
+        2267,
+        3388,
+        2372
+      ],
+      "source": "ocr",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-11A@p1",
+      "tag": "MV-715-11A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        2238,
+        2303,
+        2368,
+        2375
+      ],
+      "source": "ocr",
+      "size_inches": "1/2-D25",
+      "position_description": "bottom-left"
+    },
+    {
+      "id": "MV-719-15B@p1",
+      "tag": "MV-719-15B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-719",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4086,
+        2305,
+        4216,
+        2377
+      ],
+      "source": "ocr",
+      "size_inches": "1/2-D2S",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-713-15@p1",
+      "tag": "MV-713-15",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-713",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        2435,
+        2448,
+        2528,
+        2561
+      ],
+      "source": "ocr",
+      "size_inches": "1-D2S",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-715-14A@p1",
+      "tag": "MV-715-14A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2562,
+        2531,
+        2716,
+        2608
+      ],
+      "source": "ocr",
+      "size_inches": "1-D2S",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "MV-713-14B@p1",
+      "tag": "MV-713-14B",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-713",
+      "page": 1,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3745,
+        2531,
+        3896,
+        2608
+      ],
+      "source": "ocr",
+      "size_inches": "1-D2S",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "V-710@p1",
+      "tag": "V-710",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-710",
+      "page": 1,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        488,
+        2797,
+        832,
+        2817
+      ],
+      "source": "ocr",
+      "notation": "FROM SLUG CATCHER",
+      "position_description": "bottom-left"
+    },
+    {
+      "id": "MV-715-07@p1",
+      "tag": "MV-715-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-715",
+      "page": 1,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3397,
+        2860,
+        3469,
+        2980
+      ],
+      "source": "ocr",
+      "size_inches": "1-D2S",
+      "position_description": "bottom-center"
+    },
+    {
+      "id": "V-740@p2",
+      "tag": "V-740",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-740",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2646,
+        130,
+        3380,
+        323
+      ],
+      "source": "ocr",
+      "size_inches": "30\"",
+      "notation": "NGL STABILIZER",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-22@p2",
+      "tag": "MV-745-22",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3145,
+        496,
+        3265,
+        568
+      ],
+      "source": "ocr",
+      "pipe_label": "4\"-B2R",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-06@p2",
+      "tag": "MV-745-06",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5183,
+        1415,
+        5255,
+        1537
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-07@p2",
+      "tag": "MV-745-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3676,
+        560,
+        3805,
+        757
+      ],
+      "source": "ocr",
+      "pipe_label": "4\"-A2R",
+      "position_description": null
+    },
+    {
+      "id": "RV-6138-A@p2",
+      "tag": "RV-6138-A",
+      "component_type": "relief_valve",
+      "equipment_class": "minor",
+      "family": "RV-6138",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5303,
+        668,
+        5485,
+        690
+      ],
+      "source": "ocr",
+      "size_inches": "4\"",
+      "position_description": null
+    },
+    {
+      "id": "RV-6145-A@p2",
+      "tag": "RV-6145-A",
+      "component_type": "relief_valve",
+      "equipment_class": "minor",
+      "family": "RV-6145",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5656,
+        654,
+        5932,
+        728
+      ],
+      "source": "ocr",
+      "size_inches": "8\"",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-01@p2",
+      "tag": "MV-745-01",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        5363,
+        868,
+        5435,
+        983
+      ],
+      "source": "ocr",
+      "pipe_label": "1\"-D2S",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-02@p2",
+      "tag": "MV-745-02",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3390,
+        956,
+        3512,
+        1028
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-749@p2",
+      "tag": "V-749",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-749",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2876,
+        973,
+        3116,
+        1052
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-05@p2",
+      "tag": "MV-745-05",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        2588,
+        985,
+        2824,
+        1158
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-32@p2",
+      "tag": "MV-745-32",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2588,
+        985,
+        2824,
+        1158
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-743-33@p2",
+      "tag": "MV-743-33",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-743",
+      "page": 2,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        2598,
+        1410,
+        2824,
+        1609
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-35@p2",
+      "tag": "MV-745-35",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2598,
+        1410,
+        2824,
+        1609
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-36@p2",
+      "tag": "MV-745-36",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2600,
+        1864,
+        2720,
+        1936
+      ],
+      "source": "ocr",
+      "size_inches": "0.5",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-20@p2",
+      "tag": "MV-745-20",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3467,
+        1998,
+        3815,
+        2109
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "E-745@p2",
+      "tag": "E-745",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-745",
+      "page": 2,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        5425,
+        2324,
+        5766,
+        2416
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-19@p2",
+      "tag": "MV-745-19",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        3832,
+        2063,
+        3904,
+        2180
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-12@p2",
+      "tag": "MV-745-12",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.92,
+      "needs_review": false,
+      "bbox": [
+        3409,
+        2315,
+        3529,
+        2387
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-59@p2",
+      "tag": "MV-745-59",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        983,
+        2768,
+        1319,
+        2843
+      ],
+      "source": "ocr",
+      "size_inches": "1",
+      "notation": "HOT",
+      "pipe_label": "2\"-DC-3202-A-1H-E-HT",
+      "position_description": null
+    },
+    {
+      "id": "MV-745-58@p2",
+      "tag": "MV-745-58",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-745",
+      "page": 2,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        983,
+        2768,
+        1319,
+        2843
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "P-745@p2",
+      "tag": "P-745",
+      "component_type": "pump",
+      "equipment_class": "major",
+      "family": "P-745",
+      "page": 2,
+      "confidence": 0.99,
+      "needs_review": false,
+      "bbox": [
+        1146,
+        3547,
+        1311,
+        3604
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "AC-746@p3",
+      "tag": "AC-746",
+      "component_type": "after_cooler",
+      "equipment_class": "major",
+      "family": "AC-746",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2161,
+        2243,
+        2344,
+        2276
+      ],
+      "source": "ocr",
+      "notation": "1F12-090-1/2.1 MMBTU/HR, 15 HP 460/3/60 MWP 350 PSIG",
+      "position_description": null
+    },
+    {
+      "id": "E-742@p3",
+      "tag": "E-742",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-742",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        3402,
+        188,
+        3959,
+        385
+      ],
+      "source": "ocr",
+      "notation": "MWP 3500 PSIG @ 250\u0000 F TUBE",
+      "position_description": null
+    },
+    {
+      "id": "V-745@p3",
+      "tag": "V-745",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-745",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        406,
+        1459,
+        721,
+        1568
+      ],
+      "source": "ocr",
+      "size_inches": "4",
+      "notation": "NGL STABILIZER WARM FEED TO MID TRAY",
+      "pipe_label": "4\"_PL\u20142242-B",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-09@p3",
+      "tag": "MV-742-09",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        767,
+        1496,
+        839,
+        1616
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-733-11@p3",
+      "tag": "MV-733-11",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-733",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        2351,
+        1638,
+        2464,
+        1708
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-755-13@p3",
+      "tag": "MV-755-13",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-755",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        2200,
+        1866,
+        2320,
+        1936
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-7355-14@p3",
+      "tag": "MV-7355-14",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-7355",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2516,
+        1864,
+        2636,
+        1933
+      ],
+      "source": "ocr",
+      "size_inches": "4 1/2",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-13@p3",
+      "tag": "MV-742-13",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4530,
+        2092,
+        4547,
+        2209
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-15@p3",
+      "tag": "MV-742-15",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4573,
+        2204,
+        4700,
+        2303
+      ],
+      "source": "ocr",
+      "size_inches": "3",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-07@p3",
+      "tag": "MV-742-07",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4100,
+        2281,
+        4230,
+        2399
+      ],
+      "source": "ocr",
+      "size_inches": "1/2",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-16@p3",
+      "tag": "MV-742-16",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4340,
+        2257,
+        4412,
+        2375
+      ],
+      "source": "ocr",
+      "size_inches": "1/2",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-08@p3",
+      "tag": "MV-742-08",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        4264,
+        2269,
+        4280,
+        2389
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "E-745@p3",
+      "tag": "E-745",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-745",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        320,
+        2384,
+        731,
+        2476
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746@p3",
+      "tag": "MV-746",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": true,
+      "bbox": [
+        2509,
+        2478,
+        2629,
+        2639
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742@p3",
+      "tag": "MV-742",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4009,
+        2543,
+        4098,
+        2694
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-18@p3",
+      "tag": "MV-742-18",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3172,
+        2610,
+        3253,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-755-15@p3",
+      "tag": "MV-755-15",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-755",
+      "page": 3,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3298,
+        2610,
+        3376,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746-09@p3",
+      "tag": "MV-746-09",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        3419,
+        2747,
+        3503,
+        2984
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-10@p3",
+      "tag": "MV-742-10",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        4292,
+        2780,
+        4412,
+        2797
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-780@p3",
+      "tag": "V-780",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-780",
+      "page": 3,
+      "confidence": 0.9,
+      "needs_review": false,
+      "bbox": [
+        356,
+        2820,
+        733,
+        3030
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "E-735@p3",
+      "tag": "E-735",
+      "component_type": "heat_exchanger",
+      "equipment_class": "major",
+      "family": "E-735",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        486,
+        3066,
+        726,
+        3150
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746-10A@p3",
+      "tag": "MV-746-10A",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.85,
+      "needs_review": false,
+      "bbox": [
+        769,
+        2716,
+        882,
+        3085
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-746-08@p3",
+      "tag": "MV-746-08",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-746",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        2862,
+        2963,
+        2982,
+        3032
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-735-16@p3",
+      "tag": "MV-735-16",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-735",
+      "page": 3,
+      "confidence": 0.95,
+      "needs_review": false,
+      "bbox": [
+        3541,
+        2950,
+        3748,
+        3032
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "V-740@p3",
+      "tag": "V-740",
+      "component_type": "vessel",
+      "equipment_class": "major",
+      "family": "V-740",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        486,
+        3193,
+        690,
+        3275
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "MV-742-03@p3",
+      "tag": "MV-742-03",
+      "component_type": "motor_valve",
+      "equipment_class": "minor",
+      "family": "MV-742",
+      "page": 3,
+      "confidence": 0.98,
+      "needs_review": false,
+      "bbox": [
+        3767,
+        3232,
+        3841,
+        3354
+      ],
+      "source": "ocr",
+      "position_description": null
+    },
+    {
+      "id": "off-page@p1",
+      "tag": "off-page",
+      "component_type": "external",
+      "equipment_class": "external",
+      "family": "off-page",
+      "page": 1,
+      "source": "vision_inference",
+      "confidence": 1.0,
+      "needs_review": false,
+      "bbox": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "F-715A@p1",
+      "target": "MV-715-05A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715A@p1",
+      "target": "MV-715-02A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715A@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715B@p1",
+      "target": "MV-715-05B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715B@p1",
+      "target": "MV-715-02B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "F-715B@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-11@p1",
+      "target": "MV-715-11A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-11@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-720-01@p1",
+      "target": "V-720@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-720-01@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-720@p1",
+      "target": "MV-720-04@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-02@p1",
+      "target": "MV-715-01@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-01@p1",
+      "target": "MV-720-01@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-720-04@p1",
+      "target": "V-730@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-720-04@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-05A@p1",
+      "target": "F-715A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-05A@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-05B@p1",
+      "target": "F-715B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-05B@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-12A@p1",
+      "target": "F-715A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-04B@p1",
+      "target": "F-715B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-713-12B@p1",
+      "target": "MV-719-15B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-02A@p1",
+      "target": "MV-715-06A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-02B@p1",
+      "target": "MV-715-06B@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-06B@p1",
+      "target": "MV-715-07@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-06A@p1",
+      "target": "MV-715-06B@p1",
+      "pipe_label": null,
+      "flow_direction": "bidirectional"
+    },
+    {
+      "source": "MV-715-11A@p1",
+      "target": "MV-715-12A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-14A@p1",
+      "target": "MV-713-15@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-713-14B@p1",
+      "target": "MV-713-15@p1",
+      "pipe_label": null,
+      "flow_direction": "bidirectional"
+    },
+    {
+      "source": "V-710@p1",
+      "target": "MV-715-14A@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-07@p1",
+      "target": "MV-715-02@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-715-07@p1",
+      "target": "off-page@p1",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-740@p2",
+      "target": "MV-745-22@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-22@p2",
+      "target": "MV-745-06@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-22@p2",
+      "target": "MV-745-07@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-06@p2",
+      "target": "RV-6138-A@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-06@p2",
+      "target": "MV-745-36@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-07@p2",
+      "target": "RV-6145-A@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "RV-6138-A@p2",
+      "target": "MV-745-01@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "RV-6145-A@p2",
+      "target": "MV-745-02@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-02@p2",
+      "target": "V-749@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-749@p2",
+      "target": "MV-745-05@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-05@p2",
+      "target": "MV-745-32@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-32@p2",
+      "target": "MV-743-33@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-743-33@p2",
+      "target": "MV-745-35@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-35@p2",
+      "target": "MV-745-06@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-36@p2",
+      "target": "MV-745-20@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-20@p2",
+      "target": "E-745@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-745@p2",
+      "target": "MV-745-19@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-19@p2",
+      "target": "MV-745-12@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-12@p2",
+      "target": "MV-745-59@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-59@p2",
+      "target": "MV-745-58@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-745-58@p2",
+      "target": "P-745@p2",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "AC-746@p3",
+      "target": "E-742@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "AC-746@p3",
+      "target": "MV-742-15@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-742@p3",
+      "target": "AC-746@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-745@p3",
+      "target": "MV-742-09@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-09@p3",
+      "target": "MV-733-11@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-733-11@p3",
+      "target": "MV-755-13@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-755-13@p3",
+      "target": "MV-7355-14@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-7355-14@p3",
+      "target": "MV-742-13@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-15@p3",
+      "target": "MV-742-07@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-07@p3",
+      "target": "MV-742-16@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-16@p3",
+      "target": "MV-742-08@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-08@p3",
+      "target": "E-745@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-745@p3",
+      "target": "MV-742@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742@p3",
+      "target": "MV-742-18@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-18@p3",
+      "target": "MV-755-15@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-755-15@p3",
+      "target": "MV-746-09@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-746-09@p3",
+      "target": "MV-742-10@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-742-10@p3",
+      "target": "V-780@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-780@p3",
+      "target": "E-735@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "E-735@p3",
+      "target": "MV-746-10A@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-746-10A@p3",
+      "target": "MV-746-08@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-746-08@p3",
+      "target": "MV-735-16@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "MV-735-16@p3",
+      "target": "V-740@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    },
+    {
+      "source": "V-740@p3",
+      "target": "MV-742-03@p3",
+      "pipe_label": null,
+      "flow_direction": "forward"
+    }
+  ]
+}

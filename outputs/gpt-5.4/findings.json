@@ -1,0 +1,42 @@
+[
+  {
+    "severity": "INFO",
+    "rule": "sop_check_pass",
+    "equipment_id": "F-715",
+    "detail": "F-715 (F-715 A and B Particulate Filters) passed: no SOP-vs-P&ID mismatches detected.",
+    "sop_value": null,
+    "pid_value": null
+  },
+  {
+    "severity": "INFO",
+    "rule": "sop_check_pass",
+    "equipment_id": "V-745",
+    "detail": "V-745 (V-745 Stabilizer Tower) passed: no SOP-vs-P&ID mismatches detected.",
+    "sop_value": null,
+    "pid_value": null
+  },
+  {
+    "severity": "WARNING",
+    "rule": "pressure_mismatch",
+    "equipment_id": "E-742",
+    "detail": "Pressure mismatch on E-742: SOP=300 PSIG, P&ID=375 PSIG.",
+    "sop_value": "300",
+    "pid_value": "375"
+  },
+  {
+    "severity": "WARNING",
+    "rule": "pressure_mismatch",
+    "equipment_id": "E-742",
+    "detail": "Pressure mismatch on E-742: SOP=300 PSIG, P&ID=375 PSIG.",
+    "sop_value": "300",
+    "pid_value": "375"
+  },
+  {
+    "severity": "INFO",
+    "rule": "sop_check_pass",
+    "equipment_id": "AC-746",
+    "detail": "AC-746 (AC-746 After Cooler) passed: no SOP-vs-P&ID mismatches detected.",
+    "sop_value": null,
+    "pid_value": null
+  }
+]

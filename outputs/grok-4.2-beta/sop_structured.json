@@ -1,0 +1,37 @@
+[
+  {
+    "equipment_id": "F-715",
+    "raw_name": "F-715 A and B Particulate Filters",
+    "pressure_psig": 275,
+    "temperature_min_f": 100.0,
+    "temperature_max_f": 100.0
+  },
+  {
+    "equipment_id": "V-745",
+    "raw_name": "V-745 Stabilizer Tower",
+    "pressure_psig": 300,
+    "temperature_min_f": 375.0,
+    "temperature_max_f": 375.0
+  },
+  {
+    "equipment_id": "E-742",
+    "raw_name": "E-742 Exchanger (Shell)",
+    "pressure_psig": 300,
+    "temperature_min_f": 375.0,
+    "temperature_max_f": 375.0
+  },
+  {
+    "equipment_id": "E-742",
+    "raw_name": "E-742 Exchanger (Tube)",
+    "pressure_psig": 300,
+    "temperature_min_f": 250.0,
+    "temperature_max_f": 250.0
+  },
+  {
+    "equipment_id": "AC-746",
+    "raw_name": "AC-746 After Cooler",
+    "pressure_psig": 350,
+    "temperature_min_f": -20.0,
+    "temperature_max_f": 400.0
+  }
+]

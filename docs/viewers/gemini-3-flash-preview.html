@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P&ID Graph Viewer</title>
+  <script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #dbe2ea;
+      --accent: #1d4ed8;
+      --offpage: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .title {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .meta {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tab {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #eff6ff;
+    }
+
+    #cy {
+      width: 100%;
+      height: 70vh;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    #findings {
+      display: none;
+      width: 100%;
+      min-height: 70vh;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    .finding {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .sev {
+      display: inline-block;
+      font-weight: 700;
+      margin-right: 8px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    .sev.ERROR {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .sev.WARNING {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .sev.INFO {
+      background: #dbeafe;
+      color: #1e3a8a;
+    }
+
+    .legend {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .colour-legend {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #1f2937;
+      display: inline-block;
+    }
+
+    #tooltip {
+      position: fixed;
+      z-index: 9999;
+      pointer-events: none;
+      min-width: 220px;
+      max-width: 520px;
+      display: none;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 10px;
+      font-size: 12px;
+      white-space: pre-wrap;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1 class="title">P&ID Graph Viewer</h1>
+      <p class="meta" id="meta"></p>
+      <div class="tabs" id="tabs"></div>
+      <div id="cy"></div>
+      <div id="findings"></div>
+      <div class="colour-legend">
+        <span class="legend-item"><span class="swatch" style="background:#0ea5e9"></span>Valves / Instruments</span>
+        <span class="legend-item"><span class="swatch" style="background:#16a34a"></span>Vessels / Separators</span>
+        <span class="legend-item"><span class="swatch" style="background:#f97316"></span>Pumps</span>
+        <span class="legend-item"><span class="swatch" style="background:#eab308"></span>Exchangers</span>
+        <span class="legend-item"><span class="swatch" style="background:#8b5cf6"></span>Coolers</span>
+        <span class="legend-item"><span class="swatch" style="background:#cbd5e1"></span>External (off-page)</span>
+        <span class="legend-item"><span class="swatch" style="background:#64748b"></span>Unknown / Other</span>
+      </div>
+      <div class="legend">
+        <span><b>Hover node:</b> full attributes</span>
+        <span><b>Larger node:</b> major equipment (V/F/P/E/AC)</span>
+        <span><b>Gray dashed node:</b> connected from another page</span>
+        <span><b>Edge label:</b> pipe label</span>
+      </div>
+    </div>
+  </div>
+  <div id="tooltip"></div>
+
+  <script>
+    const payload = { "pages": [1, 2, 3], "nodes": [{ "id": "F-715A@p1", "label": "F-715A", "page": 1, "component_type": "filter_separator", "equipment_class": "major", "attrs": { "tag": "F-715A", "component_type": "filter_separator", "equipment_class": "major", "family": "F-715", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [2202, 1945, 2375, 2087], "source": "ocr", "size_inches": "18\"", "notation": "PARTICULATE FILTER SEPARATOR", "pipe_label": "6\"-D2R", "service": "GAS", "design_pressure_psig": 275.0, "design_temperature_f": 100.0, "pressure_rating_psig": 275.0, "position_description": "Left filter separator unit" } }, { "id": "F-715B@p1", "label": "F-715B", "page": 1, "component_type": "filter_separator", "equipment_class": "major", "attrs": { "tag": "F-715B", "component_type": "filter_separator", "equipment_class": "major", "family": "F-715", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [4098, 1931, 4268, 1964], "source": "ocr", "size_inches": "18\"", "notation": "PARTICULATE FILTER SEPARATOR", "pipe_label": "6\"-D2R", "service": "GAS", "design_pressure_psig": 275.0, "design_temperature_f": 100.0, "pressure_rating_psig": 275.0, "position_description": "Right filter separator unit" } }, { "id": "MV-715-11@p1", "label": "MV-715-11", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-11", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [4864, 1014, 4972, 1115], "source": "ocr", "size_inches": "1\"", "notation": "L.O.", "pipe_label": "1\"-D2S", "service": "VENT", "position_description": "Vent line isolation valve to closed drain tank" } }, { "id": "RV-6119-A@p1", "label": "RV-6119-A", "page": 1, "component_type": "relief_valve", "equipment_class": "minor", "attrs": { "tag": "RV-6119-A", "component_type": "relief_valve", "equipment_class": "minor", "family": "RV-6119", "page": 1, "confidence": 0.98, "needs_review": false, "bbox": [5387, 1024, 5930, 1113], "source": "ocr", "size_inches": "1\"", "notation": "TO CLOSED DRAIN TANK V-005", "pipe_label": "1\"-RV-6119-A", "service": "VENT", "position_description": "Relief valve at top right" } }, { "id": "MV-720-01@p1", "label": "MV-720-01", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-720-01", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-720", "page": 1, "confidence": 0.98, "needs_review": false, "bbox": [5012, 1264, 5128, 1338], "source": "ocr", "size_inches": "6\"", "notation": "L.O.", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Outlet valve to surge drum" } }, { "id": "V-720@p1", "label": "V-720", "page": 1, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-720", "component_type": "vessel", "equipment_class": "major", "family": "V-720", "page": 1, "confidence": 0.98, "needs_review": false, "bbox": [5452, 1271, 5740, 1333], "source": "ocr", "notation": "TO SURGE DRUM V-720", "pipe_label": "6\"-PL-2240-D", "service": "LIQUID", "position_description": "Off-page destination Surge Drum" } }, { "id": "MV-715-02@p1", "label": "MV-715-02", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-02", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.85, "needs_review": false, "bbox": [3220, 1364, 3292, 1484], "source": "ocr", "size_inches": "1\"", "notation": "L.O.", "pipe_label": "1\"-D2S", "service": "GAS", "position_description": "Isolation valve on the upper bridging line" } }, { "id": "MV-715-01@p1", "label": "MV-715-01", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-01", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.85, "needs_review": false, "bbox": [2195, 1580, 2648, 1897], "source": "ocr", "size_inches": "6\"", "notation": "L.O.", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Main bypass valve" } }, { "id": "MV-720-04@p1", "label": "MV-720-04", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-720-04", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-720", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [5288, 1527, 5930, 1732], "source": "ocr", "size_inches": "6\"", "notation": "N.C.", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Normally closed outlet valve" } }, { "id": "V-730@p1", "label": "V-730", "page": 1, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-730", "component_type": "vessel", "equipment_class": "major", "family": "V-730", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [5288, 1527, 5930, 1732], "source": "ocr", "notation": "TO CONDENSATE 2-PHASE SEPARATOR V-730", "pipe_label": "6\"-PL-2241-D", "service": "LIQUID/GAS", "position_description": "Off-page destination Separator V-730" } }, { "id": "MV-715-05A@p1", "label": "MV-715-05A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-05A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": true, "bbox": [2195, 1580, 2648, 1897], "source": "ocr", "position_description": null } }, { "id": "PSV-715-10@p1", "label": "PSV-715-10", "page": 1, "component_type": "pressure_safety_valve", "equipment_class": "minor", "attrs": { "tag": "PSV-715-10", "component_type": "pressure_safety_valve", "equipment_class": "minor", "family": "PSV-715", "page": 1, "confidence": 0.75, "needs_review": false, "bbox": [3786, 1579, 4237, 1890], "source": "ocr", "set_point_psig": 275.0, "size_inches": "3/4\"x1\"", "notation": "SET @ 275 PSIG", "pipe_label": "1\"-D2S", "service": "RELIEF", "position_description": "Pressure safety valve for F-715B" } }, { "id": "MV-715-05B@p1", "label": "MV-715-05B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-05B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.85, "needs_review": true, "bbox": [3786, 1579, 4237, 1890], "source": "ocr", "position_description": null } }, { "id": "MV-715-08B@p1", "label": "MV-715-08B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-08B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.9, "needs_review": true, "bbox": [3786, 1579, 4237, 1890], "source": "ocr", "position_description": null } }, { "id": "MV-715-12A@p1", "label": "MV-715-12A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-12A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": true, "bbox": [2202, 1945, 2375, 2087], "source": "ocr", "position_description": null } }, { "id": "MV-715-04B@p1", "label": "MV-715-04B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-04B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": true, "bbox": [3752, 1952, 3827, 2084], "source": "ocr", "position_description": null } }, { "id": "MV-713-12B@p1", "label": "MV-713-12B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-713-12B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-713", "page": 1, "confidence": 0.9, "needs_review": true, "bbox": [4086, 2015, 4216, 2089], "source": "ocr", "position_description": null } }, { "id": "MV-715-02A@p1", "label": "MV-715-02A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-02A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [2953, 2111, 3109, 2128], "source": "ocr", "size_inches": "6\"", "notation": "NC", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Inlet valve to F-715A" } }, { "id": "MV-715-02B@p1", "label": "MV-715-02B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-02B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [3496, 2111, 3649, 2128], "source": "ocr", "size_inches": "6\"", "notation": "NC", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Inlet valve to F-715B" } }, { "id": "MV-715-06B@p1", "label": "MV-715-06B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-06B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [3160, 2267, 3388, 2372], "source": "ocr", "size_inches": "6\"", "notation": "LO", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Outlet valve from F-715B" } }, { "id": "MV-715-06A@p1", "label": "MV-715-06A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-06A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [3160, 2267, 3388, 2372], "source": "ocr", "size_inches": "6\"", "notation": "LO", "pipe_label": "6\"-D2R", "service": "GAS", "position_description": "Outlet valve from F-715A" } }, { "id": "MV-715-11A@p1", "label": "MV-715-11A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-11A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.85, "needs_review": true, "bbox": [2238, 2303, 2368, 2375], "source": "ocr", "position_description": null } }, { "id": "MV-719-15B@p1", "label": "MV-719-15B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-719-15B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-719", "page": 1, "confidence": 0.9, "needs_review": true, "bbox": [4086, 2305, 4216, 2377], "source": "ocr", "position_description": null } }, { "id": "MV-715@p1", "label": "MV-715", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.9, "needs_review": true, "bbox": [2435, 2448, 2528, 2561], "source": "ocr", "position_description": null } }, { "id": "MV-715-14A@p1", "label": "MV-715-14A", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-14A", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [2562, 2531, 2716, 2608], "source": "ocr", "size_inches": "1\"", "notation": "LC", "pipe_label": "1\"-D2S", "service": "DRAIN", "position_description": "Drain valve for F-715A" } }, { "id": "MV-715-14B@p1", "label": "MV-715-14B", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-14B", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.85, "needs_review": false, "bbox": [3745, 2531, 3896, 2608], "source": "ocr", "size_inches": "1\"", "notation": "LC", "pipe_label": "1\"-D2S", "service": "DRAIN", "position_description": "Drain valve for F-715B" } }, { "id": "V-710@p1", "label": "V-710", "page": 1, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-710", "component_type": "vessel", "equipment_class": "major", "family": "V-710", "page": 1, "confidence": 0.9, "needs_review": false, "bbox": [488, 2797, 832, 2817], "source": "ocr", "size_inches": "6\"", "notation": "FROM SLUG CATCHER V-710", "pipe_label": "6\"-PL-2000-D", "service": "GAS", "position_description": "Source vessel Slug Catcher" } }, { "id": "MV-715-07@p1", "label": "MV-715-07", "page": 1, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-715-07", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-715", "page": 1, "confidence": 0.95, "needs_review": false, "bbox": [3397, 2860, 3469, 2980], "source": "ocr", "size_inches": "1\"", "notation": "LO", "pipe_label": "1\"-D2S", "service": "DRAIN", "position_description": "Drain header isolation valve" } }, { "id": "V-740@p2", "label": "V-740", "page": 2, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-740", "component_type": "vessel", "equipment_class": "major", "family": "V-740", "page": 2, "confidence": 0.9, "needs_review": false, "bbox": [2646, 130, 3380, 323], "source": "ocr", "size_inches": "30\"", "notation": "NGL STABILIZER", "service": "STABILIZER TOWER", "design_pressure_psig": 300.0, "design_temperature_f": 375.0, "pressure_rating_psig": 400.0, "position_description": "Top center of the diagram" } }, { "id": "MV-745-22@p2", "label": "MV-745-22", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-22", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": false, "bbox": [3145, 496, 3265, 568], "source": "ocr", "pipe_label": "4\"-B2R", "size_inches": "4\"", "notation": "MV-745-22", "service": "VAPOR OUTLET", "position_description": "On top outlet line of V-740" } }, { "id": "MV-745-06@p2", "label": "MV-745-06", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-06", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.92, "needs_review": true, "bbox": [5183, 1415, 5255, 1537], "source": "ocr", "position_description": null } }, { "id": "MV-745-07@p2", "label": "MV-745-07", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-07", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [3676, 560, 3805, 757], "source": "ocr", "notation": "LO", "position_description": null } }, { "id": "RV-6145-A@p2", "label": "RV-6145-A", "page": 2, "component_type": "relief_valve", "equipment_class": "minor", "attrs": { "tag": "RV-6145-A", "component_type": "relief_valve", "equipment_class": "minor", "family": "RV-6145", "page": 2, "confidence": 0.95, "needs_review": false, "bbox": [5656, 654, 5932, 728], "source": "ocr", "size_inches": "8\"", "set_point_psig": 300.0, "notation": "RV-6145-A", "pipe_label": "4\"-RV-6138-A", "service": "RELIEF", "position_description": "Relief system connection on top right" } }, { "id": "RV-6138-A@p2", "label": "RV-6138-A", "page": 2, "component_type": "relief_valve", "equipment_class": "minor", "attrs": { "tag": "RV-6138-A", "component_type": "relief_valve", "equipment_class": "minor", "family": "RV-6138", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [5303, 668, 5485, 690], "source": "ocr", "size_inches": "4\"", "position_description": null } }, { "id": "MV-745-01@p2", "label": "MV-745-01", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-01", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": false, "bbox": [5363, 868, 5435, 983], "source": "ocr", "size_inches": "4\"", "notation": "MV-745-01", "pipe_label": "4\"-PL-2242-S", "service": "FEED", "position_description": "Inlet line upper right" } }, { "id": "MV-745-02@p2", "label": "MV-745-02", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-02", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [3390, 956, 3512, 1028], "source": "ocr", "position_description": null } }, { "id": "V-749@p2", "label": "V-749", "page": 2, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-749", "component_type": "vessel", "equipment_class": "major", "family": "V-749", "page": 2, "confidence": 0.85, "needs_review": true, "bbox": [2876, 973, 3116, 1052], "source": "ocr", "position_description": null } }, { "id": "MV-745-32@p2", "label": "MV-745-32", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-32", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [2588, 985, 2824, 1158], "source": "ocr", "position_description": null } }, { "id": "DPIT-45-14@p2", "label": "DPIT-45-14", "page": 2, "component_type": "dpi", "equipment_class": "minor", "attrs": { "tag": "DPIT-45-14", "component_type": "dpi", "equipment_class": "minor", "family": "DPIT-45", "page": 2, "confidence": 0.88, "needs_review": true, "bbox": [2432, 1256, 2485, 1295], "source": "ocr", "position_description": null } }, { "id": "VRU-7685@p2", "label": "VRU-7685", "page": 2, "component_type": "v", "equipment_class": "minor", "attrs": { "tag": "VRU-7685", "component_type": "v", "equipment_class": "minor", "family": "VRU-7685", "page": 2, "confidence": 0.9, "needs_review": true, "bbox": [5322, 1334, 5854, 1401], "source": "ocr", "position_description": null } }, { "id": "MV-743-33@p2", "label": "MV-743-33", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-743-33", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-743", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [2598, 1410, 2824, 1609], "source": "ocr", "position_description": null } }, { "id": "MV-745-35@p2", "label": "MV-745-35", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-35", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [2598, 1410, 2824, 1609], "source": "ocr", "position_description": null } }, { "id": "MV-745-36@p2", "label": "MV-745-36", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-36", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [2600, 1864, 2720, 1936], "source": "ocr", "size_inches": "1/2", "position_description": null } }, { "id": "MV-745-20@p2", "label": "MV-745-20", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-20", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.9, "needs_review": false, "bbox": [3467, 1998, 3815, 2109], "source": "ocr", "size_inches": "6\"", "notation": "MV-745-20", "pipe_label": "6\"-PG-0544-B-2\"H", "service": "REBOILED VAPOR", "position_description": "Middle right vapor return line" } }, { "id": "E-745@p2", "label": "E-745", "page": 2, "component_type": "heat_exchanger", "equipment_class": "major", "attrs": { "tag": "E-745", "component_type": "heat_exchanger", "equipment_class": "major", "family": "E-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [5425, 2324, 5766, 2416], "source": "ocr", "position_description": null } }, { "id": "MV-745-19@p2", "label": "MV-745-19", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-19", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.9, "needs_review": true, "bbox": [3832, 2063, 3904, 2180], "source": "ocr", "position_description": null } }, { "id": "MV-745-12@p2", "label": "MV-745-12", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-12", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.9, "needs_review": true, "bbox": [3409, 2315, 3529, 2387], "source": "ocr", "position_description": null } }, { "id": "MV-745-59@p2", "label": "MV-745-59", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-59", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": false, "bbox": [983, 2768, 1319, 2843], "source": "ocr", "size_inches": "2\"", "pipe_label": "2\"-DC-3202-A-1\"", "notation": "MV-745-59", "service": "DRAIN", "position_description": "Bottom left discharge line from P-745" } }, { "id": "MV-745-58@p2", "label": "MV-745-58", "page": 2, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-745-58", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-745", "page": 2, "confidence": 0.95, "needs_review": true, "bbox": [983, 2768, 1319, 2843], "source": "ocr", "position_description": null } }, { "id": "P-745@p2", "label": "P-745", "page": 2, "component_type": "pump", "equipment_class": "major", "attrs": { "tag": "P-745", "component_type": "pump", "equipment_class": "major", "family": "P-745", "page": 2, "confidence": 0.98, "needs_review": false, "bbox": [1146, 3547, 1311, 3604], "source": "ocr", "notation": "SUMP", "service": "SUMP", "position_description": "Bottom left corner in containment" } }, { "id": "AC-746@p3", "label": "AC-746", "page": 3, "component_type": "after_cooler", "equipment_class": "major", "attrs": { "tag": "AC-746", "component_type": "after_cooler", "equipment_class": "major", "family": "AC-746", "page": 3, "confidence": 0.95, "needs_review": false, "bbox": [2161, 2243, 2344, 2276], "source": "ocr", "notation": "NGL AFTER COOLER", "size_inches": "4\"", "pipe_label": "3\"-B2R-MV-746-03-", "service": "NGL", "design_pressure_psig": 350.0, "design_temperature_f": 400.0, "pressure_rating_psig": 350.0, "position_description": "Center left of the diagram" } }, { "id": "E-742@p3", "label": "E-742", "page": 3, "component_type": "heat_exchanger", "equipment_class": "major", "attrs": { "tag": "E-742", "component_type": "heat_exchanger", "equipment_class": "major", "family": "E-742", "page": 3, "confidence": 0.95, "needs_review": false, "bbox": [3402, 188, 3959, 385], "source": "ocr", "notation": "HEAT RECOVERY", "size_inches": "3\"", "pipe_label": "3\"-B2R-MV-742-15", "service": "NGL", "design_pressure_psig": 300.0, "design_temperature_f": 375.0, "pressure_rating_psig": 300.0, "position_description": "Upper right side of the diagram" } }, { "id": "V-745@p3", "label": "V-745", "page": 3, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-745", "component_type": "vessel", "equipment_class": "major", "family": "V-745", "page": 3, "confidence": 0.95, "needs_review": false, "bbox": [406, 1459, 721, 1568], "source": "ocr", "size_inches": "4\"", "notation": "NGL STABILIZER", "pipe_label": "4\"-PL-2242-B", "service": "STABILIZER FEED", "position_description": "Off-page connector top left" } }, { "id": "MV-742-09@p3", "label": "MV-742-09", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-09", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [767, 1496, 839, 1616], "source": "ocr", "position_description": null } }, { "id": "MV-733-11@p3", "label": "MV-733-11", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-733-11", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-733", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [2351, 1638, 2464, 1708], "source": "ocr", "position_description": null } }, { "id": "MV-755-13@p3", "label": "MV-755-13", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-755-13", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-755", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [2200, 1866, 2320, 1936], "source": "ocr", "position_description": null } }, { "id": "MV-7355-14@p3", "label": "MV-7355-14", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-7355-14", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-7355", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [2516, 1864, 2636, 1933], "source": "ocr", "notation": "4/2\"-D2z", "position_description": null } }, { "id": "MV-742-13@p3", "label": "MV-742-13", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-13", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4530, 2092, 4547, 2209], "source": "ocr", "position_description": null } }, { "id": "MV-742-15@p3", "label": "MV-742-15", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-15", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4573, 2204, 4700, 2303], "source": "ocr", "notation": "3\" BYPASS", "pipe_label": "3 \u2014B2R", "position_description": null } }, { "id": "MV-742-07@p3", "label": "MV-742-07", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-07", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4100, 2281, 4230, 2399], "source": "ocr", "pipe_label": "1/2\"-D2Z", "position_description": null } }, { "id": "MV-742-16@p3", "label": "MV-742-16", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-16", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4340, 2257, 4412, 2375], "source": "ocr", "pipe_label": "1/2\"-027", "position_description": null } }, { "id": "MV-742-08@p3", "label": "MV-742-08", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-08", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4264, 2269, 4280, 2389], "source": "ocr", "position_description": null } }, { "id": "E-745@p3", "label": "E-745", "page": 3, "component_type": "heat_exchanger", "equipment_class": "major", "attrs": { "tag": "E-745", "component_type": "heat_exchanger", "equipment_class": "major", "family": "E-745", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [320, 2384, 731, 2476], "source": "ocr", "notation": "FROM STABILIZER 14 REBOILER", "pipe_label": "3\"-PL\u20142250-B-1\"H", "position_description": null } }, { "id": "MV-746@p3", "label": "MV-746", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-746", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-746", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [2509, 2478, 2629, 2639], "source": "ocr", "position_description": null } }, { "id": "MV-742@p3", "label": "MV-742", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4009, 2543, 4098, 2694], "source": "ocr", "position_description": null } }, { "id": "MV-742-18@p3", "label": "MV-742-18", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-18", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.9, "needs_review": true, "bbox": [3172, 2610, 3253, 2984], "source": "ocr", "position_description": null } }, { "id": "MV-755-15@p3", "label": "MV-755-15", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-755-15", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-755", "page": 3, "confidence": 0.9, "needs_review": true, "bbox": [3298, 2610, 3376, 2984], "source": "ocr", "position_description": null } }, { "id": "MV-746-09@p3", "label": "MV-746-09", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-746-09", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-746", "page": 3, "confidence": 0.9, "needs_review": true, "bbox": [3419, 2747, 3503, 2984], "source": "ocr", "position_description": null } }, { "id": "MV-742-10@p3", "label": "MV-742-10", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-10", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [4292, 2780, 4412, 2797], "source": "ocr", "position_description": null } }, { "id": "V-780@p3", "label": "V-780", "page": 3, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-780", "component_type": "vessel", "equipment_class": "major", "family": "V-780", "page": 3, "confidence": 0.95, "needs_review": false, "bbox": [356, 2820, 733, 3030], "source": "ocr", "size_inches": "3\"", "notation": "CONDENSATE SURGE DRUM", "pipe_label": "3\"-FG-2235-A", "service": "CONDENSATE", "position_description": "Off-page connector mid left" } }, { "id": "E-735@p3", "label": "E-735", "page": 3, "component_type": "heat_exchanger", "equipment_class": "major", "attrs": { "tag": "E-735", "component_type": "heat_exchanger", "equipment_class": "major", "family": "E-735", "page": 3, "confidence": 0.98, "needs_review": false, "bbox": [486, 3066, 726, 3150], "source": "ocr", "size_inches": "3\"", "notation": "NGL PREHEAT EXCHANGER", "pipe_label": "3\"-HOT NGL LIQUID", "service": "HOT NGL", "position_description": "Off-page connector bottom left" } }, { "id": "MV-746-05@p3", "label": "MV-746-05", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-746-05", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-746", "page": 3, "confidence": 0.9, "needs_review": true, "bbox": [769, 2716, 882, 3085], "source": "ocr", "position_description": null } }, { "id": "MV-746-08@p3", "label": "MV-746-08", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-746-08", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-746", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [2862, 2963, 2982, 3032], "source": "ocr", "position_description": null } }, { "id": "MV-735-16@p3", "label": "MV-735-16", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-735-16", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-735", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [3541, 2950, 3748, 3032], "source": "ocr", "position_description": null } }, { "id": "V-740@p3", "label": "V-740", "page": 3, "component_type": "vessel", "equipment_class": "major", "attrs": { "tag": "V-740", "component_type": "vessel", "equipment_class": "major", "family": "V-740", "page": 3, "confidence": 0.98, "needs_review": false, "bbox": [486, 3193, 690, 3275], "source": "ocr", "size_inches": "4\"", "notation": "FLASH DRUM", "pipe_label": "4\"-FG-2238-B", "service": "NGL FROM FLASH DRUM", "position_description": "Off-page connector bottom left" } }, { "id": "MV-742-03@p3", "label": "MV-742-03", "page": 3, "component_type": "motor_valve", "equipment_class": "minor", "attrs": { "tag": "MV-742-03", "component_type": "motor_valve", "equipment_class": "minor", "family": "MV-742", "page": 3, "confidence": 0.95, "needs_review": true, "bbox": [3767, 3232, 3841, 3354], "source": "ocr", "position_description": null } }, { "id": "CLOSED_DRAIN_HEADER@p2", "label": "CLOSED_DRAIN_HEADER", "page": 2, "component_type": "external", "equipment_class": "external", "attrs": { "tag": "CLOSED_DRAIN_HEADER", "component_type": "external", "equipment_class": "external", "family": "CLOSED_DRAIN_HEADER", "page": 2, "source": "vision_inference", "confidence": 1.0, "needs_review": false, "bbox": null } }, { "id": "RELIEF_HEADER@p2", "label": "RELIEF_HEADER", "page": 2, "component_type": "external", "equipment_class": "external", "attrs": { "tag": "RELIEF_HEADER", "component_type": "external", "equipment_class": "external", "family": "RELIEF_HEADER", "page": 2, "source": "vision_inference", "confidence": 1.0, "needs_review": false, "bbox": null } }], "edges": [{ "source": "F-715A@p1", "target": "MV-715-06A@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "F-715B@p1", "target": "MV-715-06B@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "MV-715-11@p1", "target": "RV-6119-A@p1", "pipe_label": "1\"-D2S", "flow_direction": "forward" }, { "source": "MV-720-01@p1", "target": "V-720@p1", "pipe_label": "6\"-PL-2240-D", "flow_direction": "forward" }, { "source": "MV-715-02A@p1", "target": "F-715A@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "MV-715-02B@p1", "target": "F-715B@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "MV-715-06B@p1", "target": "MV-720-01@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "MV-715-06A@p1", "target": "MV-720-01@p1", "pipe_label": "6\"-D2R", "flow_direction": "forward" }, { "source": "MV-715-14A@p1", "target": "MV-715-07@p1", "pipe_label": "1\"-D2S", "flow_direction": "forward" }, { "source": "MV-715-14B@p1", "target": "MV-715-07@p1", "pipe_label": "1\"-D2S", "flow_direction": "forward" }, { "source": "V-710@p1", "target": "MV-715-02A@p1", "pipe_label": "6\"-PL-2000-D", "flow_direction": "forward" }, { "source": "V-710@p1", "target": "MV-715-02B@p1", "pipe_label": "6\"-PL-2000-D", "flow_direction": "forward" }, { "source": "V-740@p2", "target": "MV-745-22@p2", "pipe_label": "4\"-HBR", "flow_direction": "forward" }, { "source": "V-740@p2", "target": "RV-6145-A@p2", "pipe_label": "4\"-RV-6138-A", "flow_direction": "forward" }, { "source": "RV-6145-A@p2", "target": "RELIEF_HEADER@p2", "pipe_label": "8\"-RV-6145-A", "flow_direction": "forward" }, { "source": "MV-745-01@p2", "target": "V-740@p2", "pipe_label": "4\"-PL-2242-S", "flow_direction": "forward" }, { "source": "MV-745-20@p2", "target": "V-740@p2", "pipe_label": "6\"-PG-0544-B-2\"H", "flow_direction": "forward" }, { "source": "MV-745-59@p2", "target": "CLOSED_DRAIN_HEADER@p2", "pipe_label": "2\"-DE-0202-A-1\"H-E-HT", "flow_direction": "forward" }, { "source": "P-745@p2", "target": "MV-745-59@p2", "pipe_label": "2\"-DE-0202-A-1\"H-E-HT", "flow_direction": "forward" }, { "source": "AC-746@p3", "target": "V-780@p3", "pipe_label": "3\"-FG-2235-A", "flow_direction": "forward" }, { "source": "E-742@p3", "target": "AC-746@p3", "pipe_label": "3\"-B2R", "flow_direction": "forward" }, { "source": "E-742@p3", "target": "V-745@p3", "pipe_label": "4\"-PL-2242-B", "flow_direction": "forward" }, { "source": "E-735@p3", "target": "E-742@p3", "pipe_label": "3\" HOT NGL LIQUID", "flow_direction": "forward" }, { "source": "V-740@p3", "target": "E-742@p3", "pipe_label": "4\"-FG-2238-B", "flow_direction": "forward" }], "findings": [{ "severity": "INFO", "rule": "sop_check_pass", "equipment_id": "F-715", "detail": "F-715 (F-715 A and B Particulate Filters) passed: no SOP-vs-P&ID mismatches detected.", "sop_value": null, "pid_value": null }, { "severity": "INFO", "rule": "sop_check_pass", "equipment_id": "V-745", "detail": "V-745 (V-745 Stabilizer Tower) passed: no SOP-vs-P&ID mismatches detected.", "sop_value": null, "pid_value": null }, { "severity": "INFO", "rule": "sop_check_pass", "equipment_id": "E-742", "detail": "E-742 (E-742 Exchanger (Shell)) passed: no SOP-vs-P&ID mismatches detected.", "sop_value": null, "pid_value": null }, { "severity": "WARNING", "rule": "temperature_mismatch", "equipment_id": "E-742", "detail": "Temperature mismatch on E-742: SOP=250 to 250 F, P&ID=375 F.", "sop_value": "250 to 250", "pid_value": "375" }, { "severity": "INFO", "rule": "sop_check_pass", "equipment_id": "AC-746", "detail": "AC-746 (AC-746 After Cooler) passed: no SOP-vs-P&ID mismatches detected.", "sop_value": null, "pid_value": null }] };
+
+    const meta = document.getElementById("meta");
+    const tabs = document.getElementById("tabs");
+    const findingsPanel = document.getElementById("findings");
+    const graphPanel = document.getElementById("cy");
+    const tooltip = document.getElementById("tooltip");
+    let cy = null;
+
+    function esc(v) {
+      return String(v)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+    }
+
+    function nodeColor(type) {
+      const t = String(type || "").toLowerCase();
+      if (
+        t.includes("valve") ||
+        t.includes("indicator") ||
+        t.includes("transmitter") ||
+        t.includes("recorder") ||
+        t.includes("instrument")
+      ) return "#0ea5e9";
+      if (t.includes("vessel") || t.includes("separator") || t.includes("filter")) return "#16a34a";
+      if (t.includes("pump")) return "#f97316";
+      if (t.includes("exchanger")) return "#eab308";
+      if (t.includes("cooler")) return "#8b5cf6";
+      return "#64748b";
+    }
+
+    function pageElements(page) {
+      const pageNodeIds = new Set(
+        payload.nodes.filter(n => n.page === page).map(n => n.id)
+      );
+      const edges = payload.edges.filter(
+        e => pageNodeIds.has(e.source) || pageNodeIds.has(e.target)
+      );
+      const keepIds = new Set(pageNodeIds);
+      for (const e of edges) {
+        keepIds.add(e.source);
+        keepIds.add(e.target);
+      }
+
+      const pageNodes = payload.nodes.filter(n => keepIds.has(n.id));
+      const pageNodesWithBbox = pageNodes.filter(
+        n => n.page === page && Array.isArray(n.attrs?.bbox) && n.attrs.bbox.length === 4
+      );
+
+      let minX = 0, maxX = 1, minY = 0, maxY = 1;
+      if (pageNodesWithBbox.length > 0) {
+        const xs = pageNodesWithBbox.map(n => (n.attrs.bbox[0] + n.attrs.bbox[2]) / 2);
+        const ys = pageNodesWithBbox.map(n => (n.attrs.bbox[1] + n.attrs.bbox[3]) / 2);
+        minX = Math.min(...xs); maxX = Math.max(...xs);
+        minY = Math.min(...ys); maxY = Math.max(...ys);
+      }
+
+      function norm(val, minVal, maxVal, outMin, outMax) {
+        if (maxVal <= minVal) return (outMin + outMax) / 2;
+        return outMin + ((val - minVal) / (maxVal - minVal)) * (outMax - outMin);
+      }
+
+      const OFFPAGE_X = 1120;
+      const OFFPAGE_Y_START = 80;
+      const OFFPAGE_Y_STEP = 42;
+      const offpageOrder = pageNodes
+        .filter(n => !(n.page === page && Array.isArray(n.attrs?.bbox) && n.attrs.bbox.length === 4))
+        .map(n => n.id)
+        .sort();
+      const offpageIndex = new Map(offpageOrder.map((id, i) => [id, i]));
+
+      const nodes = pageNodes.map(n => {
+        const attrs = Object.assign({}, n.attrs);
+        const lines = [`id: ${n.id}`];
+        for (const [k, v] of Object.entries(attrs)) {
+          lines.push(`${k}: ${JSON.stringify(v)}`);
+        }
+
+        let x = 220;
+        let y = 220;
+        if (n.page === page && Array.isArray(attrs.bbox) && attrs.bbox.length === 4) {
+          const cx = (attrs.bbox[0] + attrs.bbox[2]) / 2;
+          const cy = (attrs.bbox[1] + attrs.bbox[3]) / 2;
+          x = norm(cx, minX, maxX, 80, 980);
+          y = norm(cy, minY, maxY, 80, 740);
+        } else {
+          const idx = offpageIndex.get(n.id) || 0;
+          x = OFFPAGE_X;
+          y = OFFPAGE_Y_START + idx * OFFPAGE_Y_STEP;
+        }
+
+        return {
+          data: {
+            id: n.id,
+            label: n.label,
+            type: n.component_type || "unknown",
+            eq_class: n.equipment_class || "minor",
+            page: n.page,
+            offpage: n.page !== page ? "1" : "0",
+            tooltip: lines.join("\n"),
+          },
+          position: { x, y }
+        };
+      });
+
+      const cyEdges = edges.map(e => ({
+        data: {
+          id: `${e.source}->${e.target}::${e.pipe_label || ""}`,
+          source: e.source,
+          target: e.target,
+          label: e.pipe_label || "",
+          flow: e.flow_direction || "forward",
+        }
+      }));
+      return { nodes, edges: cyEdges };
+    }
+
+    function showGraph() {
+      graphPanel.style.display = "block";
+      findingsPanel.style.display = "none";
+    }
+
+    function showFindings() {
+      graphPanel.style.display = "none";
+      findingsPanel.style.display = "block";
+      if (!payload.findings || payload.findings.length === 0) {
+        findingsPanel.innerHTML = "<p>No findings.</p>";
+        return;
+      }
+
+      const rows = payload.findings.map(f => {
+        const sev = esc(f.severity || "INFO");
+        const eq = esc(f.equipment_id || "");
+        const detail = esc(f.detail || "");
+        const rule = esc(f.rule || "");
+        return `
+          <div class="finding">
+            <span class="sev ${sev}">${sev}</span>
+            <b>${eq}</b>
+            <div>${detail}</div>
+            <div style="color:#64748b;margin-top:4px;">rule: ${rule}</div>
+          </div>
+        `;
+      });
+      findingsPanel.innerHTML = rows.join("");
+    }
+
+    function renderGraph(page) {
+      showGraph();
+      const { nodes, edges } = pageElements(page);
+      if (cy) cy.destroy();
+
+      cy = cytoscape({
+        container: document.getElementById("cy"),
+        elements: [...nodes, ...edges],
+        style: [
+          {
+            selector: "node",
+            style: {
+              "background-color": ele => nodeColor(ele.data("type")),
+              "label": "data(label)",
+              "font-size": 10,
+              "text-wrap": "wrap",
+              "text-max-width": 90,
+              "text-valign": "center",
+              "text-halign": "center",
+              "color": "#0f172a",
+              "border-width": 2,
+              "border-color": "#0f172a",
+              "width": 28,
+              "height": 28
+            }
+          },
+          {
+            selector: 'node[eq_class = "major"]',
+            style: {
+              "width": 44,
+              "height": 44,
+              "font-size": 12,
+              "border-width": 3
+            }
+          },
+          {
+            selector: 'node[offpage = "1"]',
+            style: {
+              "background-color": "#cbd5e1",
+              "border-color": "#64748b",
+              "border-style": "dashed"
+            }
+          },
+          {
+            selector: "edge",
+            style: {
+              "width": 2,
+              "line-color": "#64748b",
+              "target-arrow-color": "#64748b",
+              "target-arrow-shape": "triangle",
+              "curve-style": "bezier",
+              "label": "data(label)",
+              "font-size": 9,
+              "text-background-opacity": 1,
+              "text-background-color": "#ffffff",
+              "text-background-padding": 1
+            }
+          }
+        ],
+        layout: {
+          name: "preset",
+          fit: true,
+          padding: 18
+        }
+      });
+
+      cy.on("mouseover", "node", evt => {
+        tooltip.textContent = evt.target.data("tooltip");
+        tooltip.style.display = "block";
+      });
+      cy.on("mousemove", "node", evt => {
+        tooltip.style.left = `${evt.originalEvent.clientX + 12}px`;
+        tooltip.style.top = `${evt.originalEvent.clientY + 12}px`;
+      });
+      cy.on("mouseout", "node", () => {
+        tooltip.style.display = "none";
+      });
+    }
+
+    function renderTabs() {
+      const pages = payload.pages;
+      tabs.innerHTML = "";
+      pages.forEach((p, idx) => {
+        const btn = document.createElement("button");
+        btn.className = `tab ${idx === 0 ? "active" : ""}`;
+        btn.textContent = `Page ${p}`;
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+          btn.classList.add("active");
+          renderGraph(p);
+        });
+        tabs.appendChild(btn);
+      });
+
+      const findingsBtn = document.createElement("button");
+      findingsBtn.className = "tab";
+      findingsBtn.textContent = "Findings";
+      findingsBtn.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        findingsBtn.classList.add("active");
+        showFindings();
+      });
+      tabs.appendChild(findingsBtn);
+
+      if (pages.length > 0) renderGraph(pages[0]);
+    }
+
+    const findingCount = (payload.findings || []).length;
+    meta.textContent = `Nodes: ${payload.nodes.length} | Edges: ${payload.edges.length} | Findings: ${findingCount}`;
+    renderTabs();
+  </script>
+</body>
+
+</html>

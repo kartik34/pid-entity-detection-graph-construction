@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P&ID Model Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #0f172a;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+    h1 { margin: 0 0 8px; }
+    p { margin: 0 0 16px; color: #475569; }
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+    a {
+      display: block;
+      padding: 12px 14px;
+      background: #fff;
+      border: 1px solid #dbe2ea;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    a:hover { border-color: #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>P&ID Graph Viewers</h1>
+    <p>Select a model output:</p>
+    <div class="list">
+      <a href="viewers/sonnet-4.6.html">Sonnet 4.6</a>
+      <a href="viewers/gpt-5.4.html">GPT-5.4</a>
+      <a href="viewers/grok-4.2-beta.html">Grok 4.2 Beta</a>
+      <a href="viewers/gemini-3-flash-preview.html">Gemini 3 Flash Preview</a>
+    </div>
+  </div>
+</body>
+</html>

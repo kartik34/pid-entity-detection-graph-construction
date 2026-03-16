@@ -1,0 +1,16 @@
+# secrets
+.env
+.env.*
+
+
+.DS_Store
+outputs/.DS_Store
+
+# Python cache
+__pycache__/
+src/pid_audit/__pycache__/
+
+# virtualenv folders
+.venv/
+venv/
+
